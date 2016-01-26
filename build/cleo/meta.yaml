@@ -1,0 +1,34 @@
+package:
+  name: cleo
+  version: "0.0.1"
+
+source:
+  git_rev: 216eab309c2b5e5ae8b7a91d9ec4a6e5d4c595e2
+  git_url: https://github.com/fmaussion/cleo.git
+
+build:
+  number: 1
+
+requirements:
+  build:
+    - python
+    - setuptools
+    - salem
+
+  run:
+    - python
+    - matplotlib
+    - salem
+    - shapely
+    - descartes
+    - scikit-image
+    - scipy
+
+test:
+  imports:
+    - cleo
+
+about:
+  home: https://github.com/fmaussion/cleo
+  license: GPLv3+
+  summary: 'Plotting on map projections'

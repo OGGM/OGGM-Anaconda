@@ -1,0 +1,28 @@
+package:
+  name: motionless
+  version: "1.2.1"
+
+source:
+  git_rev: 9930305dd7f1a349bbd9b164a51893d3d1686b39
+  git_url: https://github.com/fmaussion/motionless.git
+
+build:
+  number: 0
+
+requirements:
+  build:
+    - python
+    - setuptools
+
+  run:
+    - python
+    - matplotlib
+
+test:
+  imports:
+    - motionless
+
+about:
+  home: https://github.com/fmaussion/motionless
+  license: Apache 2.0
+  summary: 'motionless is a Python library that takes the pain out of generating Google Static Map URLs'
