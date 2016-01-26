@@ -3,8 +3,8 @@ package:
   version: "0.0.1"
 
 source:
-  git_rev: 216eab309c2b5e5ae8b7a91d9ec4a6e5d4c595e2
-  git_url: https://github.com/fmaussion/cleo.git
+  url: https://github.com/fmaussion/cleo/tarball/216eab309c2b5e5ae8b7a91d9ec4a6e5d4c595e2
+  fn: cleo-216eab309c2b5e5a.tar.gz
 
 build:
   number: 1

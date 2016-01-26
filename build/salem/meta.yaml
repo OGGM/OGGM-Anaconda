@@ -3,8 +3,8 @@ package:
   version: "0.0.1"
 
 source:
-  git_rev: 202a71c7d34ae0b83d2979d7127f0bfe3afb5647
-  git_url: https://github.com/fmaussion/salem.git
+  url: https://github.com/fmaussion/salem/tarball/202a71c7d34ae0b83d2979d7127f0bfe3afb5647
+  fn: salem-202a71c7d34ae0b83d.tar.gz
 
 build:
   number: 0

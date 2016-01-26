@@ -3,8 +3,8 @@ package:
   version: "0.0.1"
 
 source:
-  git_rev: b24469917f1dd5473dccedf19671697511b43e2f
-  git_url: https://github.com/OGGM/oggm.git
+  url: https://github.com/OGGM/oggm/tarball/b24469917f1dd5473dccedf19671697511b43e2f
+  fn: oggm-b24469917f1dd547.tar.gz
 
 build:
   number: 0
