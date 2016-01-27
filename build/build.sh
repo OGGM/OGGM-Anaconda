@@ -3,7 +3,7 @@ cd "$(dirname "$0")"
 export CONDA_BLD_PATH="$PWD/../build-output"
 
 function cb() {
-	conda build --no-anaconda-upload --python 3.4 --channel defaults --override-channels "$@" || exit -1
+	conda build --no-anaconda-upload --python 3.4 --channel defaults --channel oggm --override-channels "$@" || exit -1
 }
 
 cb ./descartes
