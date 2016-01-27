@@ -6,10 +6,10 @@ function cb() {
 	conda build --no-anaconda-upload --python 3.4 --channel defaults --override-channels "$@" || exit -1
 }
 
-cb descartes
-cb geopandas
-cb motionless
-cb salem
-cb cleo
-cb oggm
+cb ./descartes
+cb ./geopandas
+cb ./motionless
+cb ./salem
+cb ./cleo
+cb ./oggm
 
