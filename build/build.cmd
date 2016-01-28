@@ -1,5 +1,5 @@
 cd %~dp0
-set CONDA_BLD_PATH=%cd%\..\build-output
+set CONDA_BLD_PATH=%cd%\..\output
 
 call:cb .\descartes || exit /B 1
 call:cb .\geopandas || exit /B 1
