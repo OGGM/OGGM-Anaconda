@@ -19,6 +19,8 @@ requirements:
     - pyproj
     - pandas
     - joblib
+    - netcdf4
+    - configobj
 
   run:
     - python
@@ -32,6 +34,8 @@ requirements:
     - cleo
     - motionless
     - salem
+    - netcdf4
+    - configobj
 
 test:
   imports:
