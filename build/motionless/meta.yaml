@@ -1,10 +1,10 @@
 package:
   name: motionless
-  version: "1.2.1.201601271131"
+  version: "1.2.1.201602081422"
 
 source:
-  fn: motionless-9930305dd7f1a349bbd9b164a51893d3d1686b39.tar.gz
-  url: https://github.com/fmaussion/motionless/tarball/9930305dd7f1a349bbd9b164a51893d3d1686b39
+  fn: motionless-f281dc46d7c33159c36fbb98f6b62caf06184b35.tar.gz
+  url: https://github.com/fmaussion/motionless/tarball/f281dc46d7c33159c36fbb98f6b62caf06184b35
 
 build:
   number: 0
