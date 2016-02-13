@@ -22,7 +22,10 @@ sed -i -r "s|(fn: .*-).*(\.tar\.gz)|\1${SHA_OGGM}\2|" oggm/meta.yaml || exit -2
 
 DATE_STR="$(date +%Y%m%d%H%M)"
 
-sed -i -r "s|(version: .*\.).*|\1${DATE_STR}\"|" {salem,cleo,motionless,oggm}/meta.yaml || exit -2
-
+for i in salem cleo motionless oggm; do
+	if ! git diff --quiet --exit-code "${i}"/meta.yaml; then
+		sed -i -r "s|(version: .*\.).*|\1${DATE_STR}\"|" "${i}"/meta.yaml || exit -2
+	fi
+done
 
 exit 0
