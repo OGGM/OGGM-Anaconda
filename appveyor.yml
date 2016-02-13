@@ -13,7 +13,7 @@ install:
   - "conda config --set always_yes yes --set changeps1 no"
   - "conda update -q conda"
   - "conda info -a"
-  - "conda install conda-build anaconda-client"
+  - "conda install -q conda-build anaconda-client"
 
 build_script:
-  - ".\\build\\build.cmd || exit -1"
+  - "./build/build.cmd -q"
