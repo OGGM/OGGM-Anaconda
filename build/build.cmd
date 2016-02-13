@@ -8,7 +8,6 @@ call:cb %* .\salem || exit /B 1
 call:cb %* .\cleo || exit /B 1
 call:cb %* .\oggm || exit /B 1
 
-pause
 exit /B %ERRORLEVEL%
 
 :cb
