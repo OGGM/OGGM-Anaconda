@@ -3,6 +3,8 @@ environment:
     - PYTHON: "C:\\Python34-conda64"
       PYTHON_VERSION: "3.4"
       PYTHON_ARCH: "64"
+  ANACONDA_AUTH_TOKEN:
+    secure: D714tPsYy/nTIdL8rXxIHHIRhbzkIxtk+KtzkXQyCRHNj3hwGZYw1e1uCJus0ybH
 
 install:
   - "powershell ./ci/install_miniconda.ps1"
@@ -16,4 +18,6 @@ install:
   - "conda install -q conda-build anaconda-client"
 
 build_script:
-  - "./build/build.cmd -q"
+  - ".\\build\\build.cmd -q || exit -1"
+  - "for %f in (.\\output\\win-64\\*.tar.bz2) do anaconda -t %ANACONDA_AUTH_TOKEN% upload -u oggm %f"
+  - "exit 0"
