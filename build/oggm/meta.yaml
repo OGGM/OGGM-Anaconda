@@ -38,12 +38,8 @@ requirements:
     - configobj
 
 test:
-  files:
-    - run_tests.py
   requires:
     - nose
-  commands:
-    - python ./run_tests.py
 
 about:
   home: https://github.com/fmaussion/salem
