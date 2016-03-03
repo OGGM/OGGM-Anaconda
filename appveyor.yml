@@ -19,10 +19,4 @@ install:
 
 build_script:
   - ".\\build\\build.cmd -q || exit -1"
-  - "anaconda -t %ANACONDA_AUTH_TOKEN% upload -u oggm output\\win-64\\cleo-*.tar.bz2"
-  - "anaconda -t %ANACONDA_AUTH_TOKEN% upload -u oggm output\\win-64\\descartes-*.tar.bz2"
-  - "anaconda -t %ANACONDA_AUTH_TOKEN% upload -u oggm output\\win-64\\geopandas-*.tar.bz2"
-  - "anaconda -t %ANACONDA_AUTH_TOKEN% upload -u oggm output\\win-64\\motionless-*.tar.bz2"
-  - "anaconda -t %ANACONDA_AUTH_TOKEN% upload -u oggm output\\win-64\\oggm-*.tar.bz2"
-  - "anaconda -t %ANACONDA_AUTH_TOKEN% upload -u oggm output\\win-64\\salem-*.tar.bz2"
-  - "exit 0"
+  - ".\\ci\\anaconda_upload.cmd || exit -1"
