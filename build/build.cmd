@@ -1,3 +1,4 @@
+setlocal
 cd %~dp0
 set CONDA_BLD_PATH=%cd%\..\output
 
