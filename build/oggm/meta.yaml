@@ -1,6 +1,6 @@
 package:
   name: oggm
-  version: "0.0.1.201603091132"
+  version: "0.0.1.201603091154"
 
 source:
   url: https://github.com/OGGM/oggm/tarball/8ff8646d4dd47a796540e2b912383251a4c57ee3
@@ -36,6 +36,7 @@ requirements:
     - salem
     - netcdf4
     - configobj
+    - krb5
 
 test:
   requires:
