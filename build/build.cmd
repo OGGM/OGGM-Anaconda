@@ -13,4 +13,5 @@ exit /B %ERRORLEVEL%
 
 :cb
 conda build --no-anaconda-upload --python 3.4 --channel defaults --channel ioos --channel oggm --override-channels %* || exit /B 1
+conda build --no-anaconda-upload --python 2.7 --channel defaults --channel ioos --channel oggm --override-channels %* || exit /B 1
 exit /B 0
