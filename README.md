@@ -27,3 +27,11 @@ conda create --name oggm_env --file env.txt
 ```
 
 This should give you an environment called oggm_env in which OGGM is ready for use.
+
+
+Alternatively it's possible to install oggm manually, getting the latest versions of all involved packages:
+
+```
+conda create --name oggm_env python=3.5
+conda install -c ioos -c oggm oggm
+```
