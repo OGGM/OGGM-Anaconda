@@ -1,10 +1,14 @@
 environment:
-  matrix:
-    - PYTHON: "C:\\Python34-conda64"
-      PYTHON_VERSION: "3.4"
-      PYTHON_ARCH: "64"
+  PYTHON: "C:\\Python34-conda64"
+  PYTHON_VERSION: "3.4"
+  PYTHON_ARCH: "64"
+
   ANACONDA_AUTH_TOKEN:
     secure: D714tPsYy/nTIdL8rXxIHHIRhbzkIxtk+KtzkXQyCRHNj3hwGZYw1e1uCJus0ybH
+
+  matrix:
+    - CONDA_BUILD_PY: 2.7
+    - CONDA_BUILD_PY: 3.4
 
 install:
   - "powershell ./ci/install_miniconda.ps1"
