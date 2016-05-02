@@ -7,7 +7,7 @@ source:
   fn: oggm-aff1326777f3e8302f6b808f6db77c1f380bfe92.tar.gz
 
 build:
-  number: 0
+  number: 1
 
 requirements:
   build:
@@ -41,6 +41,7 @@ requirements:
     - krb5
     - xarray
     - rasterio
+    - progressbar2
 
 test:
   requires:
