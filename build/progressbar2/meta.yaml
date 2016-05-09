@@ -1,0 +1,29 @@
+package:
+  name: progressbar2
+  version: "3.6.2"
+
+source:
+  fn: progressbar2-3.6.2.tar.gz
+  url: https://pypi.python.org/packages/source/p/progressbar2/progressbar2-3.6.2.tar.gz
+  md5: 8eb9815013f48f824a0e57da0add74ab
+
+build:
+  number: 0
+
+requirements:
+  build:
+    - python
+    - setuptools
+    - pytest-runner
+
+  run:
+    - python
+
+test:
+  imports:
+    - progressbar
+
+about:
+  home: https://github.com/WoLpH/python-progressbar
+  license: BSD
+  summary: 'Python Progressbar'

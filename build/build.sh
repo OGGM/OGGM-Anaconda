@@ -11,6 +11,7 @@ function cb() {
 	fi
 }
 
+cb ./progressbar2
 cb ./descartes
 cb ./geopandas
 cb ./motionless
