@@ -1,11 +1,10 @@
 package:
   name: progressbar2
-  version: "3.6.2"
+  version: "3.6.2.201605091427"
 
 source:
-  fn: progressbar2-3.6.2.tar.gz
-  url: https://pypi.python.org/packages/source/p/progressbar2/progressbar2-3.6.2.tar.gz
-  md5: 8eb9815013f48f824a0e57da0add74ab
+  url: https://github.com/WoLpH/python-progressbar/tarball/0d35e8b6b1f7501198f0ca19309df5a0260201a3
+  fn: progressbar2-0d35e8b6b1f7501198f0ca19309df5a0260201a3.tar.gz
 
 build:
   number: 0
