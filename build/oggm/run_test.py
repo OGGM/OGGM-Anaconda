@@ -8,6 +8,8 @@ import sys
 import matplotlib
 matplotlib.use('Agg')
 
+os.environ["OGGM_SLOW_TESTS"] = "True";
+
 initial_dir = os.getcwd()
 oggm_file = os.path.abspath(oggm.__file__)
 oggm_dir = os.path.dirname(oggm_file)
