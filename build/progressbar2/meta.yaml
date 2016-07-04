@@ -1,10 +1,10 @@
 package:
   name: progressbar2
-  version: "3.9.4"
+  version: "3.6.2.201605241504"
 
 source:
-  url: https://github.com/WoLpH/python-progressbar/archive/v3.9.4.tar.gz
-  fn: progressbar2-3.9.4.tar.gz
+  url: https://github.com/TimoRoth/python-progressbar/tarball/3e0509e60731bce1ba231768605dd8b3a885efb1
+  fn: progressbar2-3e0509e60731bce1ba231768605dd8b3a885efb1.tar.gz
 
 build:
   number: 0
