@@ -8,6 +8,7 @@ function cb() {
 }
 
 cb ./progressbar2
+cb ./rasterio
 cb ./descartes
 cb ./geopandas
 cb ./motionless
