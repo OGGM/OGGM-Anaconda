@@ -1,6 +1,10 @@
 language: generic
 sudo: false
 dist: trusty
+addons:
+  apt:
+    sources:
+      - ca-certificates
 os:
   - linux
   - osx
