@@ -23,6 +23,7 @@ requirements:
     - descartes
     - scikit-image
     - scipy
+    - icu
 
 test:
   imports:

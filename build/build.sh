@@ -4,11 +4,13 @@ export CONDA_BLD_PATH="$PWD/../output"
 
 function cb() {
 	[ -n "${CONDA_BUILD_PY}" ] || CONDA_BUILD_PY="3.5"
-	conda build --no-anaconda-upload --python "${CONDA_BUILD_PY}" --channel defaults --channel conda-forge --channel oggm --override-channels "$@" || exit -1
+	conda build --no-anaconda-upload --python "${CONDA_BUILD_PY}" --channel conda-forge --channel defaults --override-channels "$@" || exit -1
 }
 
+cb ./pytest-runner
+cb ./python-utils
 cb ./progressbar2
-cb ./rasterio
+#cb ./rasterio
 cb ./descartes
 cb ./geopandas
 cb ./motionless

@@ -1,0 +1,33 @@
+{% set version = "2.0.0" %}
+
+package:
+  name: python-utils
+  version: {{ version }}
+
+source:
+  fn: python-utils-{{version}}.tar.gz
+  url: https://pypi.python.org/packages/24/f6/26474b0b52335864cf43a969987b7ab27ee14331def6ec82cbb8263bc937/python-utils-{{version}}.tar.gz
+  md5: 05d5fba0675e0ba3e3bf367e254d5369
+
+build:
+    number: 0
+
+requirements:
+  build:
+    - python
+    - setuptools
+    - pytest-runner
+    - six
+
+  run:
+    - python
+    - six
+
+test:
+  imports:
+    - python_utils
+
+about:
+  home: https://github.com/WoLpH/python-utils
+  license: MIT
+  summary: 'Python Utils is a collection of small Python functions and classes which make common patterns shorter and easier.'
