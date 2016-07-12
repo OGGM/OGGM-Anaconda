@@ -5,6 +5,9 @@ import os
 import oggm
 import sys
 
+import ssl
+ssl._create_default_https_context = ssl._create_unverified_context
+
 import matplotlib
 matplotlib.use('Agg')
 
