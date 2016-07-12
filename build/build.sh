@@ -10,7 +10,7 @@ function cb() {
 cb ./pytest-runner
 cb ./python-utils
 cb ./progressbar2
-#cb ./rasterio
+cb ./rasterio
 cb ./descartes
 cb ./geopandas
 cb ./motionless

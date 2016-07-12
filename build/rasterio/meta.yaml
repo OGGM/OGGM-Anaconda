@@ -19,7 +19,7 @@ requirements:
         - python
         - numpy 1.11*
         - cython
-        - gdal 1.11*
+        - gdal 2*
         - setuptools
     run:
         - python
@@ -27,7 +27,7 @@ requirements:
         - cligj
         - numpy 1.11*
         - snuggs
-        - gdal 1.11*
+        - gdal 2*
         - click-plugins
 
 test:
