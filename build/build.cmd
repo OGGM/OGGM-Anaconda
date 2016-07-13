@@ -5,6 +5,7 @@ set CONDA_BLD_PATH=%cd%\..\output
 call:cb %* .\pytest-runner || exit /B 1
 call:cb %* .\python-utils || exit /B 1
 call:cb %* .\progressbar2 || exit /B 1
+call:cb %* .\fiona || exit /B 1
 call:cb %* .\rasterio || exit /B 1
 call:cb %* .\descartes || exit /B 1
 call:cb %* .\geopandas || exit /B 1

@@ -1,0 +1,45 @@
+{% set version = "1.7.0" %}
+
+package:
+    name: fiona
+    version: {{ version }}
+
+source:
+    fn: fiona-{{ version }}.post1.tar.gz
+    url: https://github.com/Toblerity/Fiona/archive/{{ version }}.post2.tar.gz
+    sha256: 5eb68355b72f69f93a6c9948c0a6dc92b14408aa0d7c0ec48f097fcf17f70ee4
+
+build:
+    number: 100
+    preserve_egg_dir: True
+    entry_points:
+        - fio=fiona.fio.main:main_group
+
+requirements:
+    build:
+        - python
+        - cython
+        - setuptools
+        - numpy 1.11*
+        - gdal 2.*
+    run:
+        - python
+        - setuptools
+        - numpy 1.11*
+        - gdal 2.*
+        - cligj
+        - munch
+        - click-plugins
+        - six
+
+test:
+    imports:
+        - fiona
+        - fiona.fio
+    commands:
+        - fio --help
+
+about:
+    home: http://github.com/Toblerity/Fiona
+    license: BSD 3-Clause
+    summary: Fiona reads and writes spatial data files
