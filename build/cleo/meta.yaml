@@ -7,7 +7,7 @@ source:
   fn: cleo-a2488bd61f91ffc4ddda17605c7f41e9f153f863.tar.gz
 
 build:
-  number: 0
+  number: 1
 
 requirements:
   build:

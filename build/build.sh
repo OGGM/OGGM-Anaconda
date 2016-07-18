@@ -12,8 +12,8 @@ export OGGM_SLOW_TESTS="True"
 cb ./pytest-runner
 cb ./python-utils
 cb ./progressbar2
-cb ./fiona
-cb ./rasterio
+# cb ./fiona
+# cb ./rasterio
 cb ./descartes
 cb ./geopandas
 cb ./motionless

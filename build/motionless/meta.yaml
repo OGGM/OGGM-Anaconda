@@ -7,7 +7,7 @@ source:
   url: https://github.com/fmaussion/motionless/tarball/f281dc46d7c33159c36fbb98f6b62caf06184b35
 
 build:
-  number: 0
+  number: 1
 
 requirements:
   build:

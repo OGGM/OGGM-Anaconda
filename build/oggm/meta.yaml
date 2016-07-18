@@ -7,7 +7,7 @@ source:
   fn: oggm-960d6efb343a479a32972af5a68db6aa29c39e7f.tar.gz
 
 build:
-  number: 0
+  number: 1
 
 requirements:
   build:

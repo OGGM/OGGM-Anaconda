@@ -7,7 +7,7 @@ source:
   fn: salem-107c41244582e772778fd4f4ae1519769a3456ee.tar.gz
 
 build:
-  number: 1
+  number: 2
 
 requirements:
   build:
