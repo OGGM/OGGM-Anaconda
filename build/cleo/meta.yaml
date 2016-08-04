@@ -1,13 +1,13 @@
 package:
   name: cleo
-  version: "0.0.1.201605181644"
+  version: "0.0.1.201608041717"
 
 source:
-  url: https://github.com/fmaussion/cleo/tarball/a2488bd61f91ffc4ddda17605c7f41e9f153f863
-  fn: cleo-a2488bd61f91ffc4ddda17605c7f41e9f153f863.tar.gz
+  url: https://github.com/fmaussion/cleo/tarball/e37d9f411156d30849a7ab7206dfefa86bcbb18f
+  fn: cleo-e37d9f411156d30849a7ab7206dfefa86bcbb18f.tar.gz
 
 build:
-  number: 1
+  number: 0
 
 requirements:
   build:
