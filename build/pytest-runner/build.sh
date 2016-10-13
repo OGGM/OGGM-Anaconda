@@ -1,3 +1,3 @@
 #!/bin/bash
-
-$PYTHON setup.py install
+export PYTHONDONTWRITEBYTECODE=1
+pip install "$PWD"
