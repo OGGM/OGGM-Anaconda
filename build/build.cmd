@@ -1,6 +1,6 @@
 setlocal
 cd %~dp0
-set CONDA_BLD_PATH=%cd%\..\output
+set CONDA_BLD_PATH=%cd%\..\output\conda-bld
 
 call:cb %* .\progressbar2 || exit /B 1
 call:cb %* .\descartes || exit /B 1

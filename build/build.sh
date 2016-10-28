@@ -1,6 +1,6 @@
 #!/bin/bash
 cd "$(dirname "$0")"
-export CONDA_BLD_PATH="$PWD/../output"
+export CONDA_BLD_PATH="$PWD/../output/conda-bld"
 
 function cb() {
 	[ -n "${CONDA_BUILD_PY}" ] || CONDA_BUILD_PY="3.5"

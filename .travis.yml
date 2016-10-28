@@ -27,4 +27,4 @@ install:
 script:
   - set -e
   - ./build/build.sh
-  - for i in output/*/*.tar.bz2; do anaconda -t $ANACONDA_AUTH_TOKEN upload -u oggm $i || true; done
+  - for i in output/conda-bld/*/*.tar.bz2; do anaconda -t $ANACONDA_AUTH_TOKEN upload -u oggm $i || true; done
