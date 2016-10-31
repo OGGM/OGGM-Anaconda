@@ -19,6 +19,7 @@ requirements:
     - pyproj
     - pandas
     - joblib
+    - cartopy
 
   run:
     - python
@@ -29,6 +30,7 @@ requirements:
     - pandas
     - joblib
     - xarray
+    - cartopy
 
 test:
   imports:
