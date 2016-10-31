@@ -28,5 +28,6 @@ install:
 script:
   - set -e
   - cd ~/O
+  - export MPLBACKEND=agg
   - ./build/build.sh
   - for i in conda-bld/*/*.tar.bz2; do anaconda -t $ANACONDA_AUTH_TOKEN upload -u oggm $i || true; done

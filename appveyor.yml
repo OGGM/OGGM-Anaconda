@@ -23,5 +23,6 @@ install:
   - "conda install -q conda-build anaconda-client"
 
 build_script:
+  - "SET MPLBACKEND=agg"
   - ".\\build\\build.cmd -q || exit -1"
   - ".\\ci\\anaconda_upload.cmd || exit -1"
