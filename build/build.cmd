@@ -8,6 +8,7 @@ call:cb %* .\geopandas || exit /B 1
 call:cb %* .\motionless || exit /B 1
 call:cb %* .\salem || exit /B 1
 call:cb %* .\cleo || exit /B 1
+call:cb %* .\oggm-deps || exit /B 1
 call:cb %* .\oggm || exit /B 1
 
 exit /B %ERRORLEVEL%

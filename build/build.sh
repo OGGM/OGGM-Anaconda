@@ -15,5 +15,6 @@ cb ./geopandas
 cb ./motionless
 cb ./salem
 cb ./cleo
+cb ./oggm-deps
 cb ./oggm
 

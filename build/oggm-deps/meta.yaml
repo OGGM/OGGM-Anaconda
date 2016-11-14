@@ -1,0 +1,61 @@
+package:
+  name: oggm-deps
+  version: "0.1.1.201611081125"
+
+source:
+  url: https://github.com/OGGM/oggm/tarball/f067a178c9352c8a25507d10858f46c4eac69517
+  fn: oggm-f067a178c9352c8a25507d10858f46c4eac69517.tar.gz
+
+build:
+  number: 0
+
+requirements:
+  build:
+    - python
+    - setuptools
+    - matplotlib
+    - numpy
+    - scipy
+    - pyproj
+    - pandas
+    - joblib
+    - geopandas
+    - cleo
+    - netcdf4
+    - configobj
+    - krb5
+    - xarray
+    - rasterio
+    - scikit-image
+    - pillow
+
+  run:
+    - python
+    - matplotlib
+    - numpy
+    - scipy
+    - pyproj
+    - pandas
+    - joblib
+    - geopandas
+    - cleo
+    - motionless
+    - salem
+    - netcdf4
+    - configobj
+    - krb5
+    - xarray
+    - rasterio
+    - scikit-image
+    - pillow
+    - progressbar2
+    - filelock
+
+test:
+  requires:
+    - nose
+
+about:
+  home: https://github.com/OGGM/oggm
+  license: GPLv3+
+  summary: 'Open Global Glacier Model'

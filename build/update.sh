@@ -28,4 +28,7 @@ for i in salem cleo motionless oggm; do
 	fi
 done
 
+cp oggm/meta.yaml oggm-deps/meta.yaml || exit -2
+sed -i 's/^.*name: .*$/  name: oggm-deps/' oggm-deps/meta.yaml || exit -2
+
 exit 0
