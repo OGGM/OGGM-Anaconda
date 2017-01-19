@@ -1,15 +1,17 @@
 #!/usr/bin/env python
 
-import pytest
 import os
+os.environ["MPLBACKEND"] = 'agg'
+
+import matplotlib
+matplotlib.use('agg')
+
+import pytest
 import oggm
 import sys
 
 import ssl
 ssl._create_default_https_context = ssl._create_unverified_context
-
-import matplotlib
-matplotlib.use('agg')
 
 initial_dir = os.getcwd()
 oggm_file = os.path.abspath(oggm.__file__)
