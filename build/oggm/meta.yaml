@@ -1,10 +1,10 @@
 package:
   name: oggm
-  version: "0.1.1.201701181158"
+  version: "0.1.1.201701191148"
 
 source:
-  url: https://github.com/OGGM/oggm/tarball/4a5ec915b465a41588af690f4fb61f82f6eb033b
-  fn: oggm-4a5ec915b465a41588af690f4fb61f82f6eb033b.tar.gz
+  url: https://github.com/OGGM/oggm/tarball/43cb632eb4b21c0dded1b08fc42875a7c622c37c
+  fn: oggm-43cb632eb4b21c0dded1b08fc42875a7c622c37c.tar.gz
 
 build:
   number: 0
@@ -53,7 +53,8 @@ requirements:
 
 test:
   requires:
-    - nose
+    - pytest
+    - pytest-mpl
 
 about:
   home: https://github.com/OGGM/oggm
