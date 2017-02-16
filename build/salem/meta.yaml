@@ -1,6 +1,6 @@
 package:
   name: salem
-  version: "0.0.1.201702161215"
+  version: "0.0.1.201702161245"
 
 source:
   url: https://github.com/fmaussion/salem/tarball/37d3e212dcd07a96ebb32bbb6f0148de894caa8b
@@ -13,7 +13,7 @@ requirements:
   build:
     - python
     - setuptools
-    - matplotlib
+    - matplotlib >=2.0.0
     - numpy
     - scipy
     - pyproj
@@ -23,7 +23,7 @@ requirements:
 
   run:
     - python
-    - matplotlib
+    - matplotlib >=2.0.0
     - numpy
     - scipy
     - pyproj

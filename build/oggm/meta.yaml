@@ -1,6 +1,6 @@
 package:
   name: oggm
-  version: "0.1.1.201702161215"
+  version: "0.1.1.201702161245"
 
 source:
   url: https://github.com/OGGM/oggm/tarball/a1e3889ab660470fb4c56917b37bc1cb85bbe107
@@ -13,7 +13,7 @@ requirements:
   build:
     - python
     - setuptools
-    - matplotlib
+    - matplotlib >=2.0.0
     - numpy
     - scipy
     - pyproj
@@ -30,7 +30,7 @@ requirements:
 
   run:
     - python
-    - matplotlib
+    - matplotlib >=2.0.0
     - numpy
     - scipy
     - pyproj

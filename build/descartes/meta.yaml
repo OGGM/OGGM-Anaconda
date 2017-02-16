@@ -8,7 +8,7 @@ source:
   md5: 2af859c63f73ef852c691f46a06e5938
 
 build:
-  number: 1
+  number: 2
 
 requirements:
   build:
@@ -17,7 +17,7 @@ requirements:
 
   run:
     - python
-    - matplotlib
+    - matplotlib >=2.0.0
 
 test:
   imports:
