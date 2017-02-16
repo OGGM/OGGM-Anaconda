@@ -9,6 +9,7 @@ environment:
   matrix:
     - CONDA_BUILD_PY: 3.4
     - CONDA_BUILD_PY: 3.5
+    - CONDA_BUILD_PY: 3.6
 
 install:
   - "powershell ./ci/install_miniconda.ps1"
