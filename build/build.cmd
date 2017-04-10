@@ -2,9 +2,6 @@ setlocal
 cd %~dp0
 set CONDA_BLD_PATH=%cd%\..\conda-bld
 
-call:cb %* .\progressbar2 || exit /B 1
-call:cb %* .\descartes || exit /B 1
-call:cb %* .\geopandas || exit /B 1
 call:cb %* .\motionless || exit /B 1
 call:cb %* .\salem || exit /B 1
 call:cb %* .\oggm-deps || exit /B 1

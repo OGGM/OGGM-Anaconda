@@ -9,9 +9,6 @@ function cb() {
 
 export OGGM_SLOW_TESTS="True"
 
-cb ./progressbar2
-cb ./descartes
-cb ./geopandas
 cb ./motionless
 cb ./salem
 cb ./oggm-deps
