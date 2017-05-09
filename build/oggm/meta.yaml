@@ -1,10 +1,10 @@
 package:
   name: oggm
-  version: "0.1.1.201705031126"
+  version: "0.1.1.201705091448"
 
 source:
-  url: https://github.com/OGGM/oggm/tarball/f6e0c31dae55fa20c07ba22f137de10c47f208c8
-  fn: oggm-f6e0c31dae55fa20c07ba22f137de10c47f208c8.tar.gz
+  url: https://github.com/OGGM/oggm/tarball/19c0f072eebe4994d4807e2940a7a736d5197c39
+  fn: oggm-19c0f072eebe4994d4807e2940a7a736d5197c39.tar.gz
 
 build:
   number: 0
