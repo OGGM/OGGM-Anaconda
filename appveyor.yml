@@ -12,7 +12,7 @@ environment:
     - CONDA_BUILD_PY: 3.6
 matrix:
   allow_failures:
-    - CONDA_BUILD_PY: 3.6
+    - CONDA_BUILD_PY: 3.4
 install:
   - "powershell ./ci/install_miniconda.ps1"
   - "SET PATH=%PYTHON%;%PYTHON%\\Scripts;%PATH%"
