@@ -4,6 +4,10 @@ dist: trusty
 os:
   - linux
   - osx
+addons:
+  apt:
+    packages:
+      - ca-certificates
 env:
   matrix:
     - CONDA_BUILD_PY=3.4
