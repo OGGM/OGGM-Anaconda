@@ -1,6 +1,6 @@
 package:
   name: oggm
-  version: "0.1.1.201708081154"
+  version: "0.1.1.201708081258"
 
 source:
   url: https://github.com/OGGM/oggm/tarball/5f6748910bb3a568207f1247a2df844dea93a759
@@ -27,6 +27,7 @@ requirements:
     - rasterio
     - scikit-image
     - pillow
+    - gdal
 
   run:
     - python
@@ -40,6 +41,7 @@ requirements:
     - motionless
     - salem
     - netcdf4
+    - gdal
     - configobj
     - krb5
     - xarray

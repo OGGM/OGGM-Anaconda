@@ -24,6 +24,7 @@ install:
   - "conda update -q conda"
   - "conda info -a"
   - "conda install -q conda-build anaconda-client"
+  - "conda install -q -c conda-forge ca-certificates"
 
 build_script:
   - "SET MPLBACKEND=agg"

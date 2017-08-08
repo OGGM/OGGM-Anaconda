@@ -27,7 +27,8 @@ install:
   - conda update -q --all
   - conda update -q conda
   - conda info -a
-  - conda install conda-build anaconda-client
+  - conda install -q conda-build anaconda-client
+  - conda install -q -c conda-forge ca-certificates
 
 script:
   - set -e
