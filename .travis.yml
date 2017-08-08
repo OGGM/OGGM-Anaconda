@@ -24,11 +24,12 @@ install:
   - export PATH="$HOME/miniconda/bin:$PATH"
   - hash -r
   - conda config --set always_yes yes --set changeps1 no
+  - conda install -q -c conda-forge ca-certificates
   - conda update -q --all
   - conda update -q conda
   - conda info -a
   - conda install -q conda-build anaconda-client
-  - conda install -q -c conda-forge ca-certificates
+  - export SSL_CERT_FILE="$HOME/miniconda/ssl/cacert.pem"
 
 script:
   - set -e
