@@ -7,7 +7,7 @@ function cb() {
 	conda build --no-anaconda-upload --python "${CONDA_BUILD_PY}" --channel conda-forge --channel defaults --override-channels "$@" || exit -1
 }
 
-export OGGM_SLOW_TESTS="True"
+# export OGGM_SLOW_TESTS="True"
 
 cb ./motionless
 cb ./salem
