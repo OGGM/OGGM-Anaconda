@@ -19,29 +19,12 @@ matrix:
   allow_failures:
     - env: CONDA_BUILD_PY=3.4
 
-install:
-  - set -e
-  - ODIR="$PWD" && cd ~ && mv "$ODIR" O && cd O
-  - rvm get head || true
-  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then wget https://repo.continuum.io/miniconda/Miniconda3-latest-MacOSX-x86_64.sh -O miniconda.sh; fi
-  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh; fi
-  - bash miniconda.sh -b -p $HOME/miniconda
-  - export PATH="$HOME/miniconda/bin:$PATH"
-  - hash -r
-  - conda config --set always_yes yes --set changeps1 no
-  - conda install -q -c conda-forge ca-certificates
-  - conda update -q --all
-  - conda update -q conda
-  - conda info -a
-  - conda install -q conda-build anaconda-client
-  - export SSL_CERT_FILE="$HOME/miniconda/ssl/cacert.pem"
-
 jobs:
   include:
     - stage: motionless
-      script: cd ~/O && ./ci/travis_stage_script.sh ./motionless
+      script: ./ci/travis_stage_script.sh ./motionless
     - stage: salem
-      script: cd ~/O && ./ci/travis_stage_script.sh ./salem
+      script: ./ci/travis_stage_script.sh ./salem
     - stage: oggm
-      script: cd ~/O && ./ci/travis_stage_script.sh ./oggm-deps
-    - script: cd ~/O && ./ci/travis_stage_script.sh ./oggm
+      script: ./ci/travis_stage_script.sh ./oggm-deps
+    - script: ./ci/travis_stage_script.sh ./oggm
