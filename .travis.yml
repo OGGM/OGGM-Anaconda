@@ -12,66 +12,66 @@ env:
 jobs:
   include:
     - stage: motionless
-      script: ./ci/travis_stage_script.sh motionless
+      script: travis_wait 60 ./ci/travis_stage_script.sh motionless
       env: CONDA_BUILD_PY=3.5
       os: linux
     - stage: motionless
-      script: ./ci/travis_stage_script.sh motionless
+      script: travis_wait 60 ./ci/travis_stage_script.sh motionless
       env: CONDA_BUILD_PY=3.6
       os: linux
     - stage: motionless
-      script: ./ci/travis_stage_script.sh motionless
+      script: travis_wait 60 ./ci/travis_stage_script.sh motionless
       env: CONDA_BUILD_PY=3.5
       os: osx
     - stage: motionless
-      script: ./ci/travis_stage_script.sh motionless
+      script: travis_wait 60 ./ci/travis_stage_script.sh motionless
       env: CONDA_BUILD_PY=3.6
       os: osx
     - stage: salem
-      script: ./ci/travis_stage_script.sh salem
+      script: travis_wait 60 ./ci/travis_stage_script.sh salem
       env: CONDA_BUILD_PY=3.5
       os: linux
     - stage: salem
-      script: ./ci/travis_stage_script.sh salem
+      script: travis_wait 60 ./ci/travis_stage_script.sh salem
       env: CONDA_BUILD_PY=3.6
       os: linux
     - stage: salem
-      script: ./ci/travis_stage_script.sh salem
+      script: travis_wait 60 ./ci/travis_stage_script.sh salem
       env: CONDA_BUILD_PY=3.5
       os: osx
     - stage: salem
-      script: ./ci/travis_stage_script.sh salem
+      script: travis_wait 60 ./ci/travis_stage_script.sh salem
       env: CONDA_BUILD_PY=3.6
       os: osx
     - stage: oggm-deps
-      script: ./ci/travis_stage_script.sh oggm-deps
+      script: travis_wait 60 ./ci/travis_stage_script.sh oggm-deps
       env: CONDA_BUILD_PY=3.5
       os: linux
     - stage: oggm-deps
-      script: ./ci/travis_stage_script.sh oggm-deps
+      script: travis_wait 60 ./ci/travis_stage_script.sh oggm-deps
       env: CONDA_BUILD_PY=3.6
       os: linux
     - stage: oggm-deps
-      script: ./ci/travis_stage_script.sh oggm-deps
+      script: travis_wait 60 ./ci/travis_stage_script.sh oggm-deps
       env: CONDA_BUILD_PY=3.5
       os: osx
     - stage: oggm-deps
-      script: ./ci/travis_stage_script.sh oggm-deps
+      script: travis_wait 60 ./ci/travis_stage_script.sh oggm-deps
       env: CONDA_BUILD_PY=3.6
       os: osx
     - stage: oggm
-      script: ./ci/travis_stage_script.sh oggm
+      script: travis_wait 60 ./ci/travis_stage_script.sh oggm
       env: CONDA_BUILD_PY=3.5
       os: linux
     - stage: oggm
-      script: ./ci/travis_stage_script.sh oggm
+      script: travis_wait 60 ./ci/travis_stage_script.sh oggm
       env: CONDA_BUILD_PY=3.6
       os: linux
     - stage: oggm
-      script: ./ci/travis_stage_script.sh oggm
+      script: travis_wait 60 ./ci/travis_stage_script.sh oggm
       env: CONDA_BUILD_PY=3.5
       os: osx
     - stage: oggm
-      script: ./ci/travis_stage_script.sh oggm
+      script: travis_wait 60 ./ci/travis_stage_script.sh oggm
       env: CONDA_BUILD_PY=3.6
       os: osx
