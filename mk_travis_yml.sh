@@ -6,7 +6,7 @@ cat .travis_head.yml > .travis.yml
 echo "jobs:" >> .travis.yml
 echo "  include:" >> .travis.yml
 
-for stage in motionless salem oggm oggm-deps; do
+for stage in motionless salem oggm-deps oggm; do
 	for os in linux osx; do
 		for CONDA_BUILD_PY in 3.5 3.6; do
 			echo "    - stage: $stage" >> .travis.yml

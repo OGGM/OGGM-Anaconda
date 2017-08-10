@@ -43,22 +43,6 @@ jobs:
       script: ./ci/travis_stage_script.sh salem
       env: CONDA_BUILD_PY=3.6
       os: osx
-    - stage: oggm
-      script: ./ci/travis_stage_script.sh oggm
-      env: CONDA_BUILD_PY=3.5
-      os: linux
-    - stage: oggm
-      script: ./ci/travis_stage_script.sh oggm
-      env: CONDA_BUILD_PY=3.6
-      os: linux
-    - stage: oggm
-      script: ./ci/travis_stage_script.sh oggm
-      env: CONDA_BUILD_PY=3.5
-      os: osx
-    - stage: oggm
-      script: ./ci/travis_stage_script.sh oggm
-      env: CONDA_BUILD_PY=3.6
-      os: osx
     - stage: oggm-deps
       script: ./ci/travis_stage_script.sh oggm-deps
       env: CONDA_BUILD_PY=3.5
@@ -73,5 +57,21 @@ jobs:
       os: osx
     - stage: oggm-deps
       script: ./ci/travis_stage_script.sh oggm-deps
+      env: CONDA_BUILD_PY=3.6
+      os: osx
+    - stage: oggm
+      script: ./ci/travis_stage_script.sh oggm
+      env: CONDA_BUILD_PY=3.5
+      os: linux
+    - stage: oggm
+      script: ./ci/travis_stage_script.sh oggm
+      env: CONDA_BUILD_PY=3.6
+      os: linux
+    - stage: oggm
+      script: ./ci/travis_stage_script.sh oggm
+      env: CONDA_BUILD_PY=3.5
+      os: osx
+    - stage: oggm
+      script: ./ci/travis_stage_script.sh oggm
       env: CONDA_BUILD_PY=3.6
       os: osx
