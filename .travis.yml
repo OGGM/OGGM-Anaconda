@@ -18,6 +18,7 @@ env:
 matrix:
   allow_failures:
     - env: CONDA_BUILD_PY=3.4
+
 install:
   - set -e
   - ODIR="$PWD" && cd ~ && mv "$ODIR" O && cd O
@@ -35,9 +36,12 @@ install:
   - conda install -q conda-build anaconda-client
   - export SSL_CERT_FILE="$HOME/miniconda/ssl/cacert.pem"
 
-script:
-  - set -e
-  - cd ~/O
-  - export MPLBACKEND=agg
-  - ./build/build.sh
-  - for i in conda-bld/*/*.tar.bz2; do anaconda -t $ANACONDA_AUTH_TOKEN upload -u oggm $i || true; done
+jobs:
+  include:
+    - stage: motionless
+      script: cd ~/O && ./ci/travis_stage_script.sh ./motionless
+    - stage: salem
+      script: cd ~/O && ./ci/travis_stage_script.sh ./salem
+    - stage: oggm
+      script: cd ~/O && ./ci/travis_stage_script.sh ./oggm-deps
+    - script: cd ~/O && ./ci/travis_stage_script.sh ./oggm
