@@ -22,9 +22,7 @@ conda info -a
 conda install -q conda-build anaconda-client
 export SSL_CERT_FILE="$HOME/miniconda/ssl/cacert.pem"
 
-pushd build
-conda build --no-anaconda-upload --python "${CONDA_BUILD_PY}" --channel oggm --channel conda-forge --channel defaults --override-channels "$@"
-popd
+conda build --no-anaconda-upload --python "${CONDA_BUILD_PY}" --channel oggm --channel conda-forge --channel defaults --override-channels ./build/"$1"
 
 for i in conda-bld/*/*.tar.bz2; do
     anaconda -t $ANACONDA_AUTH_TOKEN upload -u oggm $i || true

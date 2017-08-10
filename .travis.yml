@@ -1,43 +1,77 @@
 language: generic
 sudo: required
 dist: trusty
-os:
-  - linux
-  - osx
 addons:
   apt:
     packages:
       - ca-certificates
 env:
-  matrix:
-    - CONDA_BUILD_PY=3.4
-    - CONDA_BUILD_PY=3.5
-    - CONDA_BUILD_PY=3.6
   global:
     - secure: "GBRVgHZaHgt8Qof6WQ/3D0yX2nOa7h5vDTFy4ELbC7d2OT1zce5OscD8RBW5HufA+L+ITBoAyqdyNW6wdRdloaBMM/O/qp5bNXbpohzMe3D2Vn4Rm/HBOMYMvMeIxKxlguDurwrrnZdEMkwa9Yh63SEgtwnDIftSurCChI2FmVK38VNkIhjr50UOyPEIReI38DZtO56qIyv8YlH+4YTgHiGR1Id3ftPztUxxO59NKg7OuG1LOjz3JLmcNdH2Vh3DlYzGx5vm7rU6XCv0UqWu8zPCW9w5ITk6iT6FzGadpsaTnGR7IFChnEzlalfBa51Hrdf40ks9g38eGbtRUQ58qhuoKCjaBFXYEqgU+yydey5FWD3Yf9t8PM8KcNW1Dq23+pev0GdaZ73GrznR1yE5yUj4POkqiwEGLHpns6GjR/BKz5E+oUEdWgsX3/qOcvpnwdkoHQbNa8QkP/Ua4h37uJu8LMYijF71Jt+B6x/hCEMc+IsRhEkznXqoNzD241epA+49VuUl5Sp9XXp6XfbEuC6jH/rGbXeqv5394cZeBcN9jCY2B6FGVk4Wwff32v2GdmbK1UXXWyMv0xjN/IHXJpdGXqvaz8s6CyAMbHi9lp9mmLAuYKCCX+5SzTgRBgerHNESzA10kJrr7MrV2+5iVHeRyzLMctO0NCsIrUQ6NpI="
-matrix:
-  allow_failures:
-    - env: CONDA_BUILD_PY=3.4
-install:
-  - set -e
-  - ODIR="$PWD" && cd ~ && mv "$ODIR" O && cd O
-  - rvm get head || true
-  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then wget https://repo.continuum.io/miniconda/Miniconda3-latest-MacOSX-x86_64.sh -O miniconda.sh; fi
-  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh; fi
-  - bash miniconda.sh -b -p $HOME/miniconda
-  - export PATH="$HOME/miniconda/bin:$PATH"
-  - hash -r
-  - conda config --set always_yes yes --set changeps1 no
-  - conda install -q -c conda-forge ca-certificates
-  - conda update -q --all
-  - conda update -q conda
-  - conda info -a
-  - conda install -q conda-build anaconda-client
-  - export SSL_CERT_FILE="$HOME/miniconda/ssl/cacert.pem"
 
-script:
-  - set -e
-  - cd ~/O
-  - export MPLBACKEND=agg
-  - ./build/build.sh
-  - for i in conda-bld/*/*.tar.bz2; do anaconda -t $ANACONDA_AUTH_TOKEN upload -u oggm $i || true; done
+jobs:
+  include:
+    - stage: motionless
+      script: ./ci/travis_stage_script.sh ./motionless
+      env: CONDA_BUILD_PY=3.5
+      os: linux
+    - stage: motionless
+      script: ./ci/travis_stage_script.sh ./motionless
+      env: CONDA_BUILD_PY=3.6
+      os: linux
+    - stage: motionless
+      script: ./ci/travis_stage_script.sh ./motionless
+      env: CONDA_BUILD_PY=3.5
+      os: osx
+    - stage: motionless
+      script: ./ci/travis_stage_script.sh ./motionless
+      env: CONDA_BUILD_PY=3.6
+      os: osx
+    - stage: salem
+      script: ./ci/travis_stage_script.sh ./salem
+      env: CONDA_BUILD_PY=3.5
+      os: linux
+    - stage: salem
+      script: ./ci/travis_stage_script.sh ./salem
+      env: CONDA_BUILD_PY=3.6
+      os: linux
+    - stage: salem
+      script: ./ci/travis_stage_script.sh ./salem
+      env: CONDA_BUILD_PY=3.5
+      os: osx
+    - stage: salem
+      script: ./ci/travis_stage_script.sh ./salem
+      env: CONDA_BUILD_PY=3.6
+      os: osx
+    - stage: oggm
+      script: ./ci/travis_stage_script.sh ./oggm
+      env: CONDA_BUILD_PY=3.5
+      os: linux
+    - stage: oggm
+      script: ./ci/travis_stage_script.sh ./oggm
+      env: CONDA_BUILD_PY=3.6
+      os: linux
+    - stage: oggm
+      script: ./ci/travis_stage_script.sh ./oggm
+      env: CONDA_BUILD_PY=3.5
+      os: osx
+    - stage: oggm
+      script: ./ci/travis_stage_script.sh ./oggm
+      env: CONDA_BUILD_PY=3.6
+      os: osx
+    - stage: oggm-deps
+      script: ./ci/travis_stage_script.sh ./oggm-deps
+      env: CONDA_BUILD_PY=3.5
+      os: linux
+    - stage: oggm-deps
+      script: ./ci/travis_stage_script.sh ./oggm-deps
+      env: CONDA_BUILD_PY=3.6
+      os: linux
+    - stage: oggm-deps
+      script: ./ci/travis_stage_script.sh ./oggm-deps
+      env: CONDA_BUILD_PY=3.5
+      os: osx
+    - stage: oggm-deps
+      script: ./ci/travis_stage_script.sh ./oggm-deps
+      env: CONDA_BUILD_PY=3.6
+      os: osx
