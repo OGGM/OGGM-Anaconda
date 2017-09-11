@@ -20,11 +20,11 @@ install:
   - "python -c \"import struct; print(struct.calcsize('P') * 8)\""
 
   - "conda config --set always_yes yes --set changeps1 no"
+  - "conda config --prepend channels conda-forge"
   - "conda update -q --all"
   - "conda update -q conda"
   - "conda info -a"
-  - "conda install -q conda-build anaconda-client"
-  - "conda install -q -c conda-forge ca-certificates"
+  - "conda install -q conda-build anaconda-client ca-certificates"
 
 build_script:
   - "SET MPLBACKEND=agg"
