@@ -7,7 +7,6 @@ import matplotlib
 matplotlib.use('agg')
 
 import pytest
-import pytest_mpl.plugin
 import oggm
 import sys
 
@@ -18,4 +17,4 @@ initial_dir = os.getcwd()
 oggm_file = os.path.abspath(oggm.__file__)
 oggm_dir = os.path.dirname(oggm_file)
 
-sys.exit(pytest.main([oggm_dir, '--mpl'], plugins=[pytest_mpl.plugin]))
+sys.exit(pytest.main([oggm_dir, '--mpl']))
