@@ -1,10 +1,10 @@
 package:
   name: oggm-deps
-  version: "0.1.1.201710051608"
+  version: "0.1.1.201711101101"
 
 source:
-  url: https://github.com/OGGM/oggm/tarball/86acd3df292bea8099b8204e41e932bcda44698b
-  fn: oggm-86acd3df292bea8099b8204e41e932bcda44698b.tar.gz
+  url: https://github.com/OGGM/oggm/tarball/9350bfa4916590dc6b17d3e8ad901f9eb08e2741
+  fn: oggm-9350bfa4916590dc6b17d3e8ad901f9eb08e2741.tar.gz
 
 build:
   number: 0
