@@ -1,7 +1,6 @@
 language: generic
 sudo: required
 dist: trusty
-osx_image: xcode8.3
 addons:
   apt:
     packages:
@@ -24,10 +23,12 @@ jobs:
       script: travis_wait 60 ./ci/travis_stage_script.sh motionless
       env: CONDA_BUILD_PY=3.5
       os: osx
+      osx_image: xcode9.1
     - stage: motionless
       script: travis_wait 60 ./ci/travis_stage_script.sh motionless
       env: CONDA_BUILD_PY=3.6
       os: osx
+      osx_image: xcode9.1
     - stage: salem
       script: travis_wait 60 ./ci/travis_stage_script.sh salem
       env: CONDA_BUILD_PY=3.5
@@ -40,10 +41,12 @@ jobs:
       script: travis_wait 60 ./ci/travis_stage_script.sh salem
       env: CONDA_BUILD_PY=3.5
       os: osx
+      osx_image: xcode9.1
     - stage: salem
       script: travis_wait 60 ./ci/travis_stage_script.sh salem
       env: CONDA_BUILD_PY=3.6
       os: osx
+      osx_image: xcode9.1
     - stage: oggm-deps
       script: travis_wait 60 ./ci/travis_stage_script.sh oggm-deps
       env: CONDA_BUILD_PY=3.5
@@ -56,10 +59,12 @@ jobs:
       script: travis_wait 60 ./ci/travis_stage_script.sh oggm-deps
       env: CONDA_BUILD_PY=3.5
       os: osx
+      osx_image: xcode9.1
     - stage: oggm-deps
       script: travis_wait 60 ./ci/travis_stage_script.sh oggm-deps
       env: CONDA_BUILD_PY=3.6
       os: osx
+      osx_image: xcode9.1
     - stage: oggm
       script: travis_wait 60 ./ci/travis_stage_script.sh oggm
       env: CONDA_BUILD_PY=3.5
@@ -72,7 +77,9 @@ jobs:
       script: travis_wait 60 ./ci/travis_stage_script.sh oggm
       env: CONDA_BUILD_PY=3.5
       os: osx
+      osx_image: xcode9.1
     - stage: oggm
       script: travis_wait 60 ./ci/travis_stage_script.sh oggm
       env: CONDA_BUILD_PY=3.6
       os: osx
+      osx_image: xcode9.1

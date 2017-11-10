@@ -13,6 +13,9 @@ for stage in motionless salem oggm-deps oggm; do
 			echo "      script: travis_wait 60 ./ci/travis_stage_script.sh $stage" >> .travis.yml
 			echo "      env: CONDA_BUILD_PY=$CONDA_BUILD_PY" >> .travis.yml
 			echo "      os: $os" >> .travis.yml
+			if [[ "$os" == "osx" ]]; then
+				echo "      osx_image: xcode9.1" >> .travis.yml
+			fi
 		done
 	done
 done
