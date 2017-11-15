@@ -1,10 +1,10 @@
 package:
   name: oggm
-  version: "0.1.1.201711101101"
+  version: "0.1.1.201711151357"
 
 source:
-  url: https://github.com/OGGM/oggm/tarball/9350bfa4916590dc6b17d3e8ad901f9eb08e2741
-  fn: oggm-9350bfa4916590dc6b17d3e8ad901f9eb08e2741.tar.gz
+  url: https://github.com/OGGM/oggm/tarball/358c525f5170461ecee8fa75f663e28fecc8f7c2
+  fn: oggm-358c525f5170461ecee8fa75f663e28fecc8f7c2.tar.gz
 
 build:
   number: 0
@@ -50,6 +50,7 @@ requirements:
     - pillow
     - progressbar2
     - filelock
+    - py <1.5
 
 test:
   requires:
