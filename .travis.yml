@@ -11,74 +11,74 @@ env:
 
 jobs:
   include:
-    - stage: motionless
+    - stage: motionless_linux
       script: travis_wait 60 ./ci/travis_stage_script.sh motionless
       env: CONDA_BUILD_PY=3.5
       os: linux
-    - stage: motionless
+    - stage: motionless_linux
       script: travis_wait 60 ./ci/travis_stage_script.sh motionless
       env: CONDA_BUILD_PY=3.6
       os: linux
-    - stage: motionless
-      script: travis_wait 60 ./ci/travis_stage_script.sh motionless
-      env: CONDA_BUILD_PY=3.5
-      os: osx
-      osx_image: xcode9.1
-    - stage: motionless
-      script: travis_wait 60 ./ci/travis_stage_script.sh motionless
-      env: CONDA_BUILD_PY=3.6
-      os: osx
-      osx_image: xcode9.1
-    - stage: salem
+    - stage: salem_linux
       script: travis_wait 60 ./ci/travis_stage_script.sh salem
       env: CONDA_BUILD_PY=3.5
       os: linux
-    - stage: salem
+    - stage: salem_linux
       script: travis_wait 60 ./ci/travis_stage_script.sh salem
       env: CONDA_BUILD_PY=3.6
       os: linux
-    - stage: salem
-      script: travis_wait 60 ./ci/travis_stage_script.sh salem
-      env: CONDA_BUILD_PY=3.5
-      os: osx
-      osx_image: xcode9.1
-    - stage: salem
-      script: travis_wait 60 ./ci/travis_stage_script.sh salem
-      env: CONDA_BUILD_PY=3.6
-      os: osx
-      osx_image: xcode9.1
-    - stage: oggm-deps
+    - stage: oggm-deps_linux
       script: travis_wait 60 ./ci/travis_stage_script.sh oggm-deps
       env: CONDA_BUILD_PY=3.5
       os: linux
-    - stage: oggm-deps
+    - stage: oggm-deps_linux
       script: travis_wait 60 ./ci/travis_stage_script.sh oggm-deps
       env: CONDA_BUILD_PY=3.6
       os: linux
-    - stage: oggm-deps
-      script: travis_wait 60 ./ci/travis_stage_script.sh oggm-deps
-      env: CONDA_BUILD_PY=3.5
-      os: osx
-      osx_image: xcode9.1
-    - stage: oggm-deps
-      script: travis_wait 60 ./ci/travis_stage_script.sh oggm-deps
-      env: CONDA_BUILD_PY=3.6
-      os: osx
-      osx_image: xcode9.1
-    - stage: oggm
+    - stage: oggm_linux
       script: travis_wait 60 ./ci/travis_stage_script.sh oggm
       env: CONDA_BUILD_PY=3.5
       os: linux
-    - stage: oggm
+    - stage: oggm_linux
       script: travis_wait 60 ./ci/travis_stage_script.sh oggm
       env: CONDA_BUILD_PY=3.6
       os: linux
-    - stage: oggm
+    - stage: motionless_osx
+      script: travis_wait 60 ./ci/travis_stage_script.sh motionless
+      env: CONDA_BUILD_PY=3.5
+      os: osx
+      osx_image: xcode9.1
+    - stage: motionless_osx
+      script: travis_wait 60 ./ci/travis_stage_script.sh motionless
+      env: CONDA_BUILD_PY=3.6
+      os: osx
+      osx_image: xcode9.1
+    - stage: salem_osx
+      script: travis_wait 60 ./ci/travis_stage_script.sh salem
+      env: CONDA_BUILD_PY=3.5
+      os: osx
+      osx_image: xcode9.1
+    - stage: salem_osx
+      script: travis_wait 60 ./ci/travis_stage_script.sh salem
+      env: CONDA_BUILD_PY=3.6
+      os: osx
+      osx_image: xcode9.1
+    - stage: oggm-deps_osx
+      script: travis_wait 60 ./ci/travis_stage_script.sh oggm-deps
+      env: CONDA_BUILD_PY=3.5
+      os: osx
+      osx_image: xcode9.1
+    - stage: oggm-deps_osx
+      script: travis_wait 60 ./ci/travis_stage_script.sh oggm-deps
+      env: CONDA_BUILD_PY=3.6
+      os: osx
+      osx_image: xcode9.1
+    - stage: oggm_osx
       script: travis_wait 60 ./ci/travis_stage_script.sh oggm
       env: CONDA_BUILD_PY=3.5
       os: osx
       osx_image: xcode9.1
-    - stage: oggm
+    - stage: oggm_osx
       script: travis_wait 60 ./ci/travis_stage_script.sh oggm
       env: CONDA_BUILD_PY=3.6
       os: osx
