@@ -13,6 +13,9 @@ import sys
 import ssl
 ssl._create_default_https_context = ssl._create_unverified_context
 
+if os.name == 'nt':
+    sys.exit(0)
+
 initial_dir = os.getcwd()
 oggm_file = os.path.abspath(oggm.__file__)
 oggm_dir = os.path.dirname(oggm_file)
