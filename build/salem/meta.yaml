@@ -1,10 +1,10 @@
 package:
   name: salem
-  version: "0.2.1.201801171442"
+  version: "0.2.1.201802071108"
 
 source:
-  url: https://github.com/fmaussion/salem/tarball/d78e44c348e94c6cb93f8f723e408b6ba22fe1b2
-  fn: salem-d78e44c348e94c6cb93f8f723e408b6ba22fe1b2.tar.gz
+  url: https://github.com/fmaussion/salem/tarball/8b3bf36fc880accf58d977c3bd643781561d08e0
+  fn: salem-8b3bf36fc880accf58d977c3bd643781561d08e0.tar.gz
 
 build:
   number: 0
