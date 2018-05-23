@@ -1,6 +1,6 @@
 package:
   name: oggm-deps
-  version: "1.0.0.201805231107"
+  version: "1.0.0.201805231109"
 
 source:
   url: https://github.com/OGGM/oggm/tarball/d1786cb4653e7686f12f0666b9c77f5a4267213b
@@ -28,6 +28,7 @@ requirements:
     - scikit-image
     - pillow
     - gdal
+    - versioneer
 
   run:
     - python
@@ -50,7 +51,8 @@ requirements:
     - pillow
     - progressbar2
     - filelock
-    - py <1.5
+    - versioneer
+    - py
 
 test:
   requires:
