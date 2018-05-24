@@ -1,6 +1,6 @@
 package:
   name: oggm
-  version: "1.0.0.201805231109"
+  version: "1.0.0.201805241517"
 
 source:
   url: https://github.com/OGGM/oggm/tarball/d1786cb4653e7686f12f0666b9c77f5a4267213b
@@ -20,7 +20,7 @@ requirements:
     - pandas
     - joblib
     - geopandas
-    - netcdf4
+    - netcdf4 <1.4
     - configobj
     - krb5
     - xarray
@@ -41,7 +41,7 @@ requirements:
     - geopandas
     - motionless
     - salem
-    - netcdf4
+    - netcdf4 <1.4
     - gdal
     - configobj
     - krb5
