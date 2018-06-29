@@ -1,10 +1,10 @@
 package:
   name: oggm-deps
-  version: "1.0.0.201806212130"
+  version: "1.0.0.201806291119"
 
 source:
-  url: https://github.com/OGGM/oggm/tarball/e1176aa5e8931f50859a7bc96f213cc053005849
-  fn: oggm-e1176aa5e8931f50859a7bc96f213cc053005849.tar.gz
+  url: https://github.com/OGGM/oggm/tarball/4bb8f3284a5427c72f9985c3b40aa259b102e484
+  fn: oggm-4bb8f3284a5427c72f9985c3b40aa259b102e484.tar.gz
 
 build:
   number: 0
@@ -20,7 +20,7 @@ requirements:
     - pandas
     - joblib
     - geopandas
-    - netcdf4 <1.4
+    - netcdf4
     - configobj
     - krb5
     - xarray
@@ -41,7 +41,7 @@ requirements:
     - geopandas
     - motionless
     - salem
-    - netcdf4 <1.4
+    - netcdf4
     - gdal
     - configobj
     - krb5
