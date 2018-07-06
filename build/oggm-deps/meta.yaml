@@ -1,10 +1,10 @@
 package:
   name: oggm-deps
-  version: "1.0.0.201807061105"
+  version: "1.0.0.201807061507"
 
 source:
-  url: https://github.com/OGGM/oggm/tarball/4bc501d1c93f451f76d1b9a6911cbe07e3c5174f
-  fn: oggm-4bc501d1c93f451f76d1b9a6911cbe07e3c5174f.tar.gz
+  url: https://github.com/OGGM/oggm/tarball/25ece4db3639af4e730380a326f8aa51e5abd0b1
+  fn: oggm-25ece4db3639af4e730380a326f8aa51e5abd0b1.tar.gz
 
 build:
   number: 0
@@ -29,6 +29,8 @@ requirements:
     - pillow
     - gdal
     - versioneer
+    - cython
+    - salem
 
   run:
     - python
