@@ -1,6 +1,6 @@
 package:
   name: oggm
-  version: "1.0.0.201807061507"
+  version: "1.0.0.201807061617"
 
 source:
   url: https://github.com/OGGM/oggm/tarball/25ece4db3639af4e730380a326f8aa51e5abd0b1
@@ -31,6 +31,8 @@ requirements:
     - versioneer
     - cython
     - salem
+    - boto3
+    - py
 
   run:
     - python
@@ -51,10 +53,12 @@ requirements:
     - rasterio
     - scikit-image
     - pillow
+    - gdal
     - progressbar2
     - filelock
-    - versioneer
     - py
+    - boto3
+    - cython
 
 test:
   requires:
