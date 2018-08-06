@@ -20,4 +20,4 @@ initial_dir = os.getcwd()
 oggm_file = os.path.abspath(oggm.__file__)
 oggm_dir = os.path.dirname(oggm_file)
 
-sys.exit(pytest.main([oggm_dir, '--mpl']))
+sys.exit(pytest.main([oggm_dir, '--mpl', '-k', 'not test_modelsection_withtrib']))
