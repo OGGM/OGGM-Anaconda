@@ -7,12 +7,8 @@ environment:
     secure: D714tPsYy/nTIdL8rXxIHHIRhbzkIxtk+KtzkXQyCRHNj3hwGZYw1e1uCJus0ybH
 
   matrix:
-    - CONDA_BUILD_PY: 3.4
     - CONDA_BUILD_PY: 3.5
     - CONDA_BUILD_PY: 3.6
-matrix:
-  allow_failures:
-    - CONDA_BUILD_PY: 3.4
 install:
   - "powershell ./ci/install_miniconda.ps1"
   - "SET PATH=%PYTHON%;%PYTHON%\\Scripts;%PATH%"
