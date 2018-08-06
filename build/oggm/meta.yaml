@@ -1,6 +1,6 @@
 package:
   name: oggm
-  version: "1.0.0.201808061817"
+  version: "1.0.0.201808061841"
 
 source:
   url: https://github.com/OGGM/oggm/tarball/704fd9fd1d8b4b7d8c83226b8da97919a9b55837
@@ -8,33 +8,13 @@ source:
 
 build:
   number: 0
+  noarch: python
+  script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
   build:
     - python
-    - setuptools
-    - matplotlib >=2.0.0
-    - numpy
-    - scipy
-    - pyproj
-    - pandas
-    - joblib
-    - geopandas
-    - netcdf4
-    - configobj
-    - krb5
-    - xarray
-    - rasterio
-    - scikit-image
-    - pillow
-    - gdal
-    - versioneer
-    - cython
-    - salem
-    - boto3
-    - py
-    - progressbar2
-    - filelock
+    - pip
 
   run:
     - python
