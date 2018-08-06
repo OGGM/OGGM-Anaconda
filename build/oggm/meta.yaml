@@ -1,6 +1,6 @@
 package:
   name: oggm
-  version: "1.0.0.201808061522"
+  version: "1.0.0.201808061817"
 
 source:
   url: https://github.com/OGGM/oggm/tarball/704fd9fd1d8b4b7d8c83226b8da97919a9b55837
@@ -33,6 +33,8 @@ requirements:
     - salem
     - boto3
     - py
+    - progressbar2
+    - filelock
 
   run:
     - python
