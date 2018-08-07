@@ -8,8 +8,10 @@ addons:
 env:
   global:
     - secure: "GBRVgHZaHgt8Qof6WQ/3D0yX2nOa7h5vDTFy4ELbC7d2OT1zce5OscD8RBW5HufA+L+ITBoAyqdyNW6wdRdloaBMM/O/qp5bNXbpohzMe3D2Vn4Rm/HBOMYMvMeIxKxlguDurwrrnZdEMkwa9Yh63SEgtwnDIftSurCChI2FmVK38VNkIhjr50UOyPEIReI38DZtO56qIyv8YlH+4YTgHiGR1Id3ftPztUxxO59NKg7OuG1LOjz3JLmcNdH2Vh3DlYzGx5vm7rU6XCv0UqWu8zPCW9w5ITk6iT6FzGadpsaTnGR7IFChnEzlalfBa51Hrdf40ks9g38eGbtRUQ58qhuoKCjaBFXYEqgU+yydey5FWD3Yf9t8PM8KcNW1Dq23+pev0GdaZ73GrznR1yE5yUj4POkqiwEGLHpns6GjR/BKz5E+oUEdWgsX3/qOcvpnwdkoHQbNa8QkP/Ua4h37uJu8LMYijF71Jt+B6x/hCEMc+IsRhEkznXqoNzD241epA+49VuUl5Sp9XXp6XfbEuC6jH/rGbXeqv5394cZeBcN9jCY2B6FGVk4Wwff32v2GdmbK1UXXWyMv0xjN/IHXJpdGXqvaz8s6CyAMbHi9lp9mmLAuYKCCX+5SzTgRBgerHNESzA10kJrr7MrV2+5iVHeRyzLMctO0NCsIrUQ6NpI="
-
 jobs:
+  fast_finish: true
+  allow_failures:
+    - env: CONDA_BUILD_PY=3.7
   include:
     - stage: motionless_linux
       script: travis_wait 60 ./ci/travis_stage_script.sh motionless
@@ -19,6 +21,10 @@ jobs:
       script: travis_wait 60 ./ci/travis_stage_script.sh motionless
       env: CONDA_BUILD_PY=3.6
       os: linux
+    - stage: motionless_linux
+      script: travis_wait 60 ./ci/travis_stage_script.sh motionless
+      env: CONDA_BUILD_PY=3.7
+      os: linux
     - stage: salem_linux
       script: travis_wait 60 ./ci/travis_stage_script.sh salem
       env: CONDA_BUILD_PY=3.5
@@ -26,6 +32,10 @@ jobs:
     - stage: salem_linux
       script: travis_wait 60 ./ci/travis_stage_script.sh salem
       env: CONDA_BUILD_PY=3.6
+      os: linux
+    - stage: salem_linux
+      script: travis_wait 60 ./ci/travis_stage_script.sh salem
+      env: CONDA_BUILD_PY=3.7
       os: linux
     - stage: oggm-deps_linux
       script: travis_wait 60 ./ci/travis_stage_script.sh oggm-deps
@@ -35,6 +45,10 @@ jobs:
       script: travis_wait 60 ./ci/travis_stage_script.sh oggm-deps
       env: CONDA_BUILD_PY=3.6
       os: linux
+    - stage: oggm-deps_linux
+      script: travis_wait 60 ./ci/travis_stage_script.sh oggm-deps
+      env: CONDA_BUILD_PY=3.7
+      os: linux
     - stage: oggm_linux
       script: travis_wait 60 ./ci/travis_stage_script.sh oggm
       env: CONDA_BUILD_PY=3.5
@@ -42,6 +56,10 @@ jobs:
     - stage: oggm_linux
       script: travis_wait 60 ./ci/travis_stage_script.sh oggm
       env: CONDA_BUILD_PY=3.6
+      os: linux
+    - stage: oggm_linux
+      script: travis_wait 60 ./ci/travis_stage_script.sh oggm
+      env: CONDA_BUILD_PY=3.7
       os: linux
     - stage: motionless_osx
       script: travis_wait 60 ./ci/travis_stage_script.sh motionless
@@ -51,6 +69,11 @@ jobs:
     - stage: motionless_osx
       script: travis_wait 60 ./ci/travis_stage_script.sh motionless
       env: CONDA_BUILD_PY=3.6
+      os: osx
+      osx_image: xcode9.1
+    - stage: motionless_osx
+      script: travis_wait 60 ./ci/travis_stage_script.sh motionless
+      env: CONDA_BUILD_PY=3.7
       os: osx
       osx_image: xcode9.1
     - stage: salem_osx
@@ -63,6 +86,11 @@ jobs:
       env: CONDA_BUILD_PY=3.6
       os: osx
       osx_image: xcode9.1
+    - stage: salem_osx
+      script: travis_wait 60 ./ci/travis_stage_script.sh salem
+      env: CONDA_BUILD_PY=3.7
+      os: osx
+      osx_image: xcode9.1
     - stage: oggm-deps_osx
       script: travis_wait 60 ./ci/travis_stage_script.sh oggm-deps
       env: CONDA_BUILD_PY=3.5
@@ -73,6 +101,11 @@ jobs:
       env: CONDA_BUILD_PY=3.6
       os: osx
       osx_image: xcode9.1
+    - stage: oggm-deps_osx
+      script: travis_wait 60 ./ci/travis_stage_script.sh oggm-deps
+      env: CONDA_BUILD_PY=3.7
+      os: osx
+      osx_image: xcode9.1
     - stage: oggm_osx
       script: travis_wait 60 ./ci/travis_stage_script.sh oggm
       env: CONDA_BUILD_PY=3.5
@@ -81,5 +114,10 @@ jobs:
     - stage: oggm_osx
       script: travis_wait 60 ./ci/travis_stage_script.sh oggm
       env: CONDA_BUILD_PY=3.6
+      os: osx
+      osx_image: xcode9.1
+    - stage: oggm_osx
+      script: travis_wait 60 ./ci/travis_stage_script.sh oggm
+      env: CONDA_BUILD_PY=3.7
       os: osx
       osx_image: xcode9.1

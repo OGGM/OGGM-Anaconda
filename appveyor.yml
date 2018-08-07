@@ -1,6 +1,6 @@
 environment:
-  PYTHON: "C:\\Python34-conda64"
-  PYTHON_VERSION: "3.5"
+  PYTHON: "C:\\Python36-conda64"
+  PYTHON_VERSION: "3.6"
   PYTHON_ARCH: "64"
 
   ANACONDA_AUTH_TOKEN:
@@ -9,6 +9,10 @@ environment:
   matrix:
     - CONDA_BUILD_PY: 3.5
     - CONDA_BUILD_PY: 3.6
+    - CONDA_BUILD_PY: 3.7
+matrix:
+  allow_failures:
+    - CONDA_BUILD_PY: 3.7
 install:
   - "powershell ./ci/install_miniconda.ps1"
   - "SET PATH=%PYTHON%;%PYTHON%\\Scripts;%PATH%"
