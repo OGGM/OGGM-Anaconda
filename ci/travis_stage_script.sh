@@ -7,8 +7,8 @@ export CONDA_BLD_PATH="$PWD/conda-bld"
 unset TRAVIS
 
 rvm get head || true
-if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then wget https://repo.continuum.io/miniconda/Miniconda3-latest-MacOSX-x86_64.sh -O miniconda.sh; fi
-if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh; fi
+if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then wget -q https://repo.continuum.io/miniconda/Miniconda3-latest-MacOSX-x86_64.sh -O miniconda.sh; fi
+if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then wget -q https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh; fi
 bash miniconda.sh -b -p $HOME/miniconda
 rm miniconda.sh
 export PATH="$HOME/miniconda/bin:$PATH"
@@ -19,7 +19,7 @@ conda install -q -c conda-forge ca-certificates
 conda update -q --all
 conda update -q conda
 conda info -a
-conda install -q conda-build anaconda-client
+conda install -q conda-build conda-verify anaconda-client
 export SSL_CERT_FILE="$HOME/miniconda/ssl/cacert.pem"
 
 conda build --no-anaconda-upload --python "${CONDA_BUILD_PY}" --channel oggm --channel conda-forge --channel defaults --override-channels ./build/"$1"
