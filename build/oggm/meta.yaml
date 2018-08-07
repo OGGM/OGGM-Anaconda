@@ -1,10 +1,10 @@
 package:
   name: oggm
-  version: "1.0.0.201808071629"
+  version: "1.0.0.201808072013"
 
 source:
-  url: https://github.com/OGGM/oggm/tarball/1d4345d370ec08f756efff786c237fb9e2d06221
-  fn: oggm-1d4345d370ec08f756efff786c237fb9e2d06221.tar.gz
+  url: https://github.com/OGGM/oggm/tarball/f4485053d02a40c4d85e3bcadaf85bcffa843080
+  fn: oggm-f4485053d02a40c4d85e3bcadaf85bcffa843080.tar.gz
 
 build:
   number: 0
@@ -41,19 +41,18 @@ requirements:
     - boto3
     - cython
 
+### TEST START ###
 test:
   requires:
     - git
     - pytest
     - pytest-mpl
   commands:
-    - mkdir tested_oggm
+    - git clone https://github.com/OGGM/oggm.git tested_oggm
     - cd tested_oggm
-    - git init .
-    - git remote add origin https://github.com/OGGM/oggm.git
-    - git fetch --depth 1 origin 1d4345d370ec08f756efff786c237fb9e2d06221
-    - git checkout FETCH_HEAD
+    - git checkout f4485053d02a40c4d85e3bcadaf85bcffa843080
     - pytest --mpl --run-download .
+### TEST END ###
 
 about:
   home: https://github.com/OGGM/oggm
