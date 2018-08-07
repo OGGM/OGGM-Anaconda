@@ -13,6 +13,7 @@ sed -i -r "s|(url: .*/).*|\1${SHA_SALEM}|" salem/meta.yaml || exit -2
 sed -i -r "s|(fn: .*-).*(\.tar\.gz)|\1${SHA_SALEM}\2|" salem/meta.yaml || exit -2
 sed -i -r "s|(url: .*/).*|\1${SHA_OGGM}|" oggm/meta.yaml || exit -2
 sed -i -r "s|(fn: .*-).*(\.tar\.gz)|\1${SHA_OGGM}\2|" oggm/meta.yaml || exit -2
+sed -i -r "s|(1 origin ).*|\1${SHA_OGGM}|" oggm/meta.yaml || exit -2
 
 DATE_STR="$(date +%Y%m%d%H%M)"
 
