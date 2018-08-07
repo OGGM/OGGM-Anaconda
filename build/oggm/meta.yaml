@@ -49,6 +49,8 @@ test:
   requires:
     - pytest
     - pytest-mpl
+  commands:
+    - pytest --mpl --run-download oggm
 
 about:
   home: https://github.com/OGGM/oggm
