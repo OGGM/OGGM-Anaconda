@@ -43,6 +43,10 @@ requirements:
     - cython
 
 test:
+  source_files:
+    - conftest.py
+    - pytest.ini
+    - setup.cfg
   requires:
     - pytest
     - pytest-mpl
