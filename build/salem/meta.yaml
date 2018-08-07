@@ -1,6 +1,6 @@
 package:
   name: salem
-  version: "0.2.2.201808061841"
+  version: "0.2.2.201808071354"
 
 source:
   url: https://github.com/fmaussion/salem/tarball/6b660ad5a0bccf13b62282c1da2e73480a62cde1
@@ -8,7 +8,6 @@ source:
 
 build:
   number: 0
-  noarch: python
   script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
