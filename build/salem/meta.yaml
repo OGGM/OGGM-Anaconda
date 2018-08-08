@@ -1,6 +1,6 @@
 package:
   name: salem
-  version: "0.2.2.201808081138"
+  version: "0.2.2.201808081430"
 
 source:
   url: https://github.com/fmaussion/salem/tarball/ce6482bb0125f3236078ddd29946126f278cf686
@@ -26,6 +26,7 @@ requirements:
     - joblib
     - xarray
     - cartopy
+    - netcdf4
 
 test:
   imports:
