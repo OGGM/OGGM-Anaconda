@@ -1,6 +1,6 @@
 package:
   name: oggm-deps
-  version: "1.0.0.201808081908"
+  version: "1.0.0.201808091146"
 
 source:
   url: https://github.com/OGGM/oggm/tarball/7c8b233501edefe152e5f93b361063c3d65a10f0
@@ -40,6 +40,7 @@ requirements:
     - py
     - boto3
     - cython
+    - requests
 
 
 about:
