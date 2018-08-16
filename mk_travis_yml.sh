@@ -4,7 +4,7 @@ cd "$(dirname "$0")"
 cat .travis_head.yml > .travis.yml
 
 for os in linux osx; do
-	for stage in motionless salem oggm-deps oggm; do
+	for stage in motionless salem pytest-mpl oggm-deps oggm; do
 		for CONDA_BUILD_PY in 3.5 3.6 3.7; do
 			echo "    - stage: ${stage}_${os}" >> .travis.yml
 			echo "      script: ./ci/travis_stage_script.sh $stage" >> .travis.yml
