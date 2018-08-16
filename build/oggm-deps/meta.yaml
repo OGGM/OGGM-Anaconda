@@ -1,6 +1,6 @@
 package:
   name: oggm-deps
-  version: "1.0.0.201808161630"
+  version: "1.0.0.201808161758"
 
 source:
   url: https://github.com/OGGM/oggm/tarball/85ecc1b9f502f12b05eed82dfa1985d2c1ae2bb5
@@ -8,12 +8,12 @@ source:
 
 build:
   number: 0
-  script: python -m pip install --no-deps --ignore-installed .
+  script: python setup.py install --single-version-externally-managed --record record.txt
 
 requirements:
   build:
     - python
-    - pip
+    - setuptools
 
   run:
     - python
