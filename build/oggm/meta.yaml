@@ -1,10 +1,10 @@
 package:
   name: oggm
-  version: "1.0.0.201808162239"
+  version: "1.0.0.201808241340"
 
 source:
-  url: https://github.com/OGGM/oggm/tarball/670bebc570420f6f332304907e6dde099f6e833c
-  fn: oggm-670bebc570420f6f332304907e6dde099f6e833c.tar.gz
+  url: https://github.com/OGGM/oggm/tarball/6028692ecb5c5d759c43b8895c557d43cf95fe87
+  fn: oggm-6028692ecb5c5d759c43b8895c557d43cf95fe87.tar.gz
 
 build:
   number: 0
@@ -51,7 +51,7 @@ test:
   commands:
     - git clone https://github.com/OGGM/oggm.git tested_oggm
     - cd tested_oggm
-    - git checkout 670bebc570420f6f332304907e6dde099f6e833c
+    - git checkout 6028692ecb5c5d759c43b8895c557d43cf95fe87
     - pytest --mpl --run-download .
 ### TEST END ###
 
