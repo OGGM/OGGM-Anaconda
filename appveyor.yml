@@ -21,6 +21,7 @@ install:
 
   - "conda config --set always_yes yes --set changeps1 no"
   - "conda config --prepend channels conda-forge"
+  - "conda config --set anaconda_upload yes"
   - "conda update -q --all"
   - "conda update -q conda"
   - "conda info -a"
@@ -29,4 +30,3 @@ install:
 build_script:
   - "SET MPLBACKEND=agg"
   - ".\\build\\build.cmd -q || exit -1"
-  - ".\\ci\\anaconda_upload.cmd || exit -1"
