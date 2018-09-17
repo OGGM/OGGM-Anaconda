@@ -21,7 +21,7 @@ install:
 
   - "conda config --set always_yes yes --set changeps1 no"
   - "conda config --prepend channels conda-forge"
-  - "conda config --set anaconda_upload yes"
+  - "conda config --set anaconda_upload no"
   - "conda update -q --all"
   - "conda update -q conda"
   - "conda info -a"
