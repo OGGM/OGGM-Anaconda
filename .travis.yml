@@ -25,54 +25,6 @@ jobs:
       script: ./ci/travis_stage_script.sh motionless
       env: CONDA_BUILD_PY=3.7
       os: linux
-    - stage: salem_linux
-      script: ./ci/travis_stage_script.sh salem
-      env: CONDA_BUILD_PY=3.5
-      os: linux
-    - stage: salem_linux
-      script: ./ci/travis_stage_script.sh salem
-      env: CONDA_BUILD_PY=3.6
-      os: linux
-    - stage: salem_linux
-      script: ./ci/travis_stage_script.sh salem
-      env: CONDA_BUILD_PY=3.7
-      os: linux
-    - stage: pytest-mpl_linux
-      script: ./ci/travis_stage_script.sh pytest-mpl
-      env: CONDA_BUILD_PY=3.5
-      os: linux
-    - stage: pytest-mpl_linux
-      script: ./ci/travis_stage_script.sh pytest-mpl
-      env: CONDA_BUILD_PY=3.6
-      os: linux
-    - stage: pytest-mpl_linux
-      script: ./ci/travis_stage_script.sh pytest-mpl
-      env: CONDA_BUILD_PY=3.7
-      os: linux
-    - stage: oggm-deps_linux
-      script: ./ci/travis_stage_script.sh oggm-deps
-      env: CONDA_BUILD_PY=3.5
-      os: linux
-    - stage: oggm-deps_linux
-      script: ./ci/travis_stage_script.sh oggm-deps
-      env: CONDA_BUILD_PY=3.6
-      os: linux
-    - stage: oggm-deps_linux
-      script: ./ci/travis_stage_script.sh oggm-deps
-      env: CONDA_BUILD_PY=3.7
-      os: linux
-    - stage: oggm_linux
-      script: ./ci/travis_stage_script.sh oggm
-      env: CONDA_BUILD_PY=3.5
-      os: linux
-    - stage: oggm_linux
-      script: ./ci/travis_stage_script.sh oggm
-      env: CONDA_BUILD_PY=3.6
-      os: linux
-    - stage: oggm_linux
-      script: ./ci/travis_stage_script.sh oggm
-      env: CONDA_BUILD_PY=3.7
-      os: linux
     - stage: motionless_osx
       script: ./ci/travis_stage_script.sh motionless
       env: CONDA_BUILD_PY=3.5
@@ -88,6 +40,18 @@ jobs:
       env: CONDA_BUILD_PY=3.7
       os: osx
       osx_image: xcode9.1
+    - stage: salem_linux
+      script: ./ci/travis_stage_script.sh salem
+      env: CONDA_BUILD_PY=3.5
+      os: linux
+    - stage: salem_linux
+      script: ./ci/travis_stage_script.sh salem
+      env: CONDA_BUILD_PY=3.6
+      os: linux
+    - stage: salem_linux
+      script: ./ci/travis_stage_script.sh salem
+      env: CONDA_BUILD_PY=3.7
+      os: linux
     - stage: salem_osx
       script: ./ci/travis_stage_script.sh salem
       env: CONDA_BUILD_PY=3.5
@@ -103,6 +67,18 @@ jobs:
       env: CONDA_BUILD_PY=3.7
       os: osx
       osx_image: xcode9.1
+    - stage: pytest-mpl_linux
+      script: ./ci/travis_stage_script.sh pytest-mpl
+      env: CONDA_BUILD_PY=3.5
+      os: linux
+    - stage: pytest-mpl_linux
+      script: ./ci/travis_stage_script.sh pytest-mpl
+      env: CONDA_BUILD_PY=3.6
+      os: linux
+    - stage: pytest-mpl_linux
+      script: ./ci/travis_stage_script.sh pytest-mpl
+      env: CONDA_BUILD_PY=3.7
+      os: linux
     - stage: pytest-mpl_osx
       script: ./ci/travis_stage_script.sh pytest-mpl
       env: CONDA_BUILD_PY=3.5
@@ -118,6 +94,18 @@ jobs:
       env: CONDA_BUILD_PY=3.7
       os: osx
       osx_image: xcode9.1
+    - stage: oggm-deps_linux
+      script: ./ci/travis_stage_script.sh oggm-deps
+      env: CONDA_BUILD_PY=3.5
+      os: linux
+    - stage: oggm-deps_linux
+      script: ./ci/travis_stage_script.sh oggm-deps
+      env: CONDA_BUILD_PY=3.6
+      os: linux
+    - stage: oggm-deps_linux
+      script: ./ci/travis_stage_script.sh oggm-deps
+      env: CONDA_BUILD_PY=3.7
+      os: linux
     - stage: oggm-deps_osx
       script: ./ci/travis_stage_script.sh oggm-deps
       env: CONDA_BUILD_PY=3.5
@@ -133,6 +121,18 @@ jobs:
       env: CONDA_BUILD_PY=3.7
       os: osx
       osx_image: xcode9.1
+    - stage: oggm_linux
+      script: ./ci/travis_stage_script.sh oggm
+      env: CONDA_BUILD_PY=3.5
+      os: linux
+    - stage: oggm_linux
+      script: ./ci/travis_stage_script.sh oggm
+      env: CONDA_BUILD_PY=3.6
+      os: linux
+    - stage: oggm_linux
+      script: ./ci/travis_stage_script.sh oggm
+      env: CONDA_BUILD_PY=3.7
+      os: linux
     - stage: oggm_osx
       script: ./ci/travis_stage_script.sh oggm
       env: CONDA_BUILD_PY=3.5
