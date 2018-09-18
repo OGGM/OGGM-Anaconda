@@ -13,138 +13,138 @@ jobs:
   allow_failures:
     - env: CONDA_BUILD_PY=3.7
   include:
-    - stage: motionless_linux
+    - stage: motionless
       script: ./ci/travis_stage_script.sh motionless
       env: CONDA_BUILD_PY=3.5
       os: linux
-    - stage: motionless_linux
+    - stage: motionless
       script: ./ci/travis_stage_script.sh motionless
       env: CONDA_BUILD_PY=3.6
       os: linux
-    - stage: motionless_linux
+    - stage: motionless
       script: ./ci/travis_stage_script.sh motionless
       env: CONDA_BUILD_PY=3.7
       os: linux
-    - stage: motionless_osx
+    - stage: motionless
       script: ./ci/travis_stage_script.sh motionless
       env: CONDA_BUILD_PY=3.5
       os: osx
-      osx_image: xcode9.1
-    - stage: motionless_osx
+      osx_image: xcode10
+    - stage: motionless
       script: ./ci/travis_stage_script.sh motionless
       env: CONDA_BUILD_PY=3.6
       os: osx
-      osx_image: xcode9.1
-    - stage: motionless_osx
+      osx_image: xcode10
+    - stage: motionless
       script: ./ci/travis_stage_script.sh motionless
       env: CONDA_BUILD_PY=3.7
       os: osx
-      osx_image: xcode9.1
-    - stage: salem_linux
+      osx_image: xcode10
+    - stage: salem
       script: ./ci/travis_stage_script.sh salem
       env: CONDA_BUILD_PY=3.5
       os: linux
-    - stage: salem_linux
+    - stage: salem
       script: ./ci/travis_stage_script.sh salem
       env: CONDA_BUILD_PY=3.6
       os: linux
-    - stage: salem_linux
+    - stage: salem
       script: ./ci/travis_stage_script.sh salem
       env: CONDA_BUILD_PY=3.7
       os: linux
-    - stage: salem_osx
+    - stage: salem
       script: ./ci/travis_stage_script.sh salem
       env: CONDA_BUILD_PY=3.5
       os: osx
-      osx_image: xcode9.1
-    - stage: salem_osx
+      osx_image: xcode10
+    - stage: salem
       script: ./ci/travis_stage_script.sh salem
       env: CONDA_BUILD_PY=3.6
       os: osx
-      osx_image: xcode9.1
-    - stage: salem_osx
+      osx_image: xcode10
+    - stage: salem
       script: ./ci/travis_stage_script.sh salem
       env: CONDA_BUILD_PY=3.7
       os: osx
-      osx_image: xcode9.1
-    - stage: pytest-mpl_linux
+      osx_image: xcode10
+    - stage: pytest-mpl
       script: ./ci/travis_stage_script.sh pytest-mpl
       env: CONDA_BUILD_PY=3.5
       os: linux
-    - stage: pytest-mpl_linux
+    - stage: pytest-mpl
       script: ./ci/travis_stage_script.sh pytest-mpl
       env: CONDA_BUILD_PY=3.6
       os: linux
-    - stage: pytest-mpl_linux
+    - stage: pytest-mpl
       script: ./ci/travis_stage_script.sh pytest-mpl
       env: CONDA_BUILD_PY=3.7
       os: linux
-    - stage: pytest-mpl_osx
+    - stage: pytest-mpl
       script: ./ci/travis_stage_script.sh pytest-mpl
       env: CONDA_BUILD_PY=3.5
       os: osx
-      osx_image: xcode9.1
-    - stage: pytest-mpl_osx
+      osx_image: xcode10
+    - stage: pytest-mpl
       script: ./ci/travis_stage_script.sh pytest-mpl
       env: CONDA_BUILD_PY=3.6
       os: osx
-      osx_image: xcode9.1
-    - stage: pytest-mpl_osx
+      osx_image: xcode10
+    - stage: pytest-mpl
       script: ./ci/travis_stage_script.sh pytest-mpl
       env: CONDA_BUILD_PY=3.7
       os: osx
-      osx_image: xcode9.1
-    - stage: oggm-deps_linux
+      osx_image: xcode10
+    - stage: oggm-deps
       script: ./ci/travis_stage_script.sh oggm-deps
       env: CONDA_BUILD_PY=3.5
       os: linux
-    - stage: oggm-deps_linux
+    - stage: oggm-deps
       script: ./ci/travis_stage_script.sh oggm-deps
       env: CONDA_BUILD_PY=3.6
       os: linux
-    - stage: oggm-deps_linux
+    - stage: oggm-deps
       script: ./ci/travis_stage_script.sh oggm-deps
       env: CONDA_BUILD_PY=3.7
       os: linux
-    - stage: oggm-deps_osx
+    - stage: oggm-deps
       script: ./ci/travis_stage_script.sh oggm-deps
       env: CONDA_BUILD_PY=3.5
       os: osx
-      osx_image: xcode9.1
-    - stage: oggm-deps_osx
+      osx_image: xcode10
+    - stage: oggm-deps
       script: ./ci/travis_stage_script.sh oggm-deps
       env: CONDA_BUILD_PY=3.6
       os: osx
-      osx_image: xcode9.1
-    - stage: oggm-deps_osx
+      osx_image: xcode10
+    - stage: oggm-deps
       script: ./ci/travis_stage_script.sh oggm-deps
       env: CONDA_BUILD_PY=3.7
       os: osx
-      osx_image: xcode9.1
-    - stage: oggm_linux
+      osx_image: xcode10
+    - stage: oggm
       script: ./ci/travis_stage_script.sh oggm
       env: CONDA_BUILD_PY=3.5
       os: linux
-    - stage: oggm_linux
+    - stage: oggm
       script: ./ci/travis_stage_script.sh oggm
       env: CONDA_BUILD_PY=3.6
       os: linux
-    - stage: oggm_linux
+    - stage: oggm
       script: ./ci/travis_stage_script.sh oggm
       env: CONDA_BUILD_PY=3.7
       os: linux
-    - stage: oggm_osx
+    - stage: oggm
       script: ./ci/travis_stage_script.sh oggm
       env: CONDA_BUILD_PY=3.5
       os: osx
-      osx_image: xcode9.1
-    - stage: oggm_osx
+      osx_image: xcode10
+    - stage: oggm
       script: ./ci/travis_stage_script.sh oggm
       env: CONDA_BUILD_PY=3.6
       os: osx
-      osx_image: xcode9.1
-    - stage: oggm_osx
+      osx_image: xcode10
+    - stage: oggm
       script: ./ci/travis_stage_script.sh oggm
       env: CONDA_BUILD_PY=3.7
       os: osx
-      osx_image: xcode9.1
+      osx_image: xcode10
