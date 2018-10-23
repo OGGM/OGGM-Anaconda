@@ -28,5 +28,4 @@ install:
 
 build_script:
   - "SET MPLBACKEND=agg"
-  - "conda config --prepend channels conda-forge"
   - ".\\build\\build.cmd -q || exit -1"
