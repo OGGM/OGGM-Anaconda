@@ -1,6 +1,6 @@
 package:
   name: pytest-mpl
-  version: "0.111.0.201810241129"
+  version: "0.111.0.201810241130"
 
 source:
   url: https://github.com/OGGM/pytest-mpl/tarball/6ef9d8dc707e03886c140a6691a0592ee4792f5c
@@ -18,14 +18,14 @@ requirements:
   run:
     - python
     - setuptools
-    - pytest !=3.7.1,!=3.7.0
+    - pytest >=3.7.2
     - matplotlib
     - nose
 
 test:
   commands:
-    - "pytest --help"
-    - "pytest --help | grep mpl-oggm"
+    - "pytest -p pytest_mpl.plugin --help"
+    - "pytest -p pytest_mpl.plugin --help | grep mpl-oggm"
 
 about:
   home: https://github.com/OGGM/pytest-mpl
