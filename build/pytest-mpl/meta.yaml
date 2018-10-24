@@ -1,10 +1,10 @@
 package:
   name: pytest-mpl
-  version: "0.111.0.201810241515"
+  version: "0.111.0.201810241653"
 
 source:
-  url: https://github.com/OGGM/pytest-mpl/tarball/bda9f426628d87564b89e2ee7bdcb44cc8be6494
-  fn: pytest-mpl-bda9f426628d87564b89e2ee7bdcb44cc8be6494.tar.gz
+  url: https://github.com/OGGM/pytest-mpl/tarball/ffe265810e16aaca7c03dda7e783b60ac90e7743
+  fn: pytest-mpl-ffe265810e16aaca7c03dda7e783b60ac90e7743.tar.gz
 
 build:
   number: 0
