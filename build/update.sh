@@ -14,20 +14,16 @@ sed -i -r "s|( url: .*/).*|\1${SHA_MPL}|" pytest-mpl/meta.yaml || exit -2
 sed -i -r "s|(fn: .*-).*(\.tar\.gz)|\1${SHA_MPL}\2|" pytest-mpl/meta.yaml || exit -2
 sed -i -r "s|( url: .*/).*|\1${SHA_SALEM}|" salem/meta.yaml || exit -2
 sed -i -r "s|(fn: .*-).*(\.tar\.gz)|\1${SHA_SALEM}\2|" salem/meta.yaml || exit -2
-sed -i -r "s|( url: .*/).*|\1${SHA_OGGM}|" oggm/meta.yaml || exit -2
-sed -i -r "s|(fn: .*-).*(\.tar\.gz)|\1${SHA_OGGM}\2|" oggm/meta.yaml || exit -2
-sed -i -r "s|(checkout ).*|\1${SHA_OGGM}|" oggm/meta.yaml || exit -2
+sed -i -r "s|( url: .*/).*|\1${SHA_OGGM}|" oggmdev/meta.yaml || exit -2
+sed -i -r "s|(fn: .*-).*(\.tar\.gz)|\1${SHA_OGGM}\2|" oggmdev/meta.yaml || exit -2
+sed -i -r "s|(checkout ).*|\1${SHA_OGGM}|" oggmdev/meta.yaml || exit -2
 
 DATE_STR="$(date +%Y%m%d%H%M)"
 
-for i in salem oggm pytest-mpl; do
+for i in salem oggmdev pytest-mpl; do
 	if ! git diff --quiet --exit-code "${i}"/meta.yaml; then
 		sed -i -r "s|(version: .*\.).*|\1${DATE_STR}\"|" "${i}"/meta.yaml || exit -2
 	fi
 done
-
-cp oggm/meta.yaml oggm-deps/meta.yaml || exit -2
-sed -i 's/^.*name: .*$/  name: oggm-deps/' oggm-deps/meta.yaml || exit -2
-sed -i '/### TEST START ###/,/### TEST END ###/d' oggm-deps/meta.yaml || exit -2
 
 exit 0

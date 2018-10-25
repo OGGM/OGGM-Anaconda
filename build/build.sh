@@ -13,5 +13,6 @@ cb ./motionless
 cb ./salem
 cb ./pytest-mpl
 cb ./oggm-deps
+cb ./oggmdev
 cb ./oggm
 
