@@ -1,6 +1,6 @@
 package:
   name: oggmdev
-  version: "1.0.0.201810251620"
+  version: "1.0.0.201810251739"
 
 source:
   url: https://github.com/OGGM/oggm/tarball/62911767f5e391206e4323d22a1f66b22385b20f
@@ -49,10 +49,7 @@ test:
     - pytest
     - pytest-mpl
   commands:
-    - git clone https://github.com/OGGM/oggm.git tested_oggm
-    - cd tested_oggm
-    - git checkout 62911767f5e391206e4323d22a1f66b22385b20f
-    - pytest --mpl-oggm --mpl-upload --run-download .
+    - pytest --mpl-oggm --mpl-upload --run-download --pyargs oggm
 ### TEST END ###
 
 about:
