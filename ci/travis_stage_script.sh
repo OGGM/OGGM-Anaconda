@@ -26,8 +26,9 @@ conda config --set always_yes yes --set changeps1 no
 
 CUR_NO="$(grep number: ./build/"$1"/meta.yaml | head -n1 | cut -d: -f2 | xargs)"
 CUR_VER="$(grep version: ./build/"$1"/meta.yaml | cut -d'"' -f2)"
-CUR_NO="py${CONDA_BUILD_PY/./}_${CUR_NO}"
-LATEST_VER="$(conda search -c oggm --override-channels "$1" | tail -n1)"
+CUR_PY="py${CONDA_BUILD_PY/./}"
+CUR_NO="${CUR_PY}_${CUR_NO}"
+LATEST_VER="$(conda search -c oggm --override-channels "$1" | grep "$CUR_PY" | tail -n1)"
 
 if [[ "$(echo $LATEST_VER | cut -d' ' -f2)" == "$CUR_VER" ]] && [[ "$(echo $LATEST_VER | cut -d' ' -f3)" == "$CUR_NO" ]]; then
 	echo "Anaconda already has ${CUR_VER} ${CUR_NO}, exiting early."
