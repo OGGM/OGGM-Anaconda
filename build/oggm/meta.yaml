@@ -50,7 +50,7 @@ test:
     - pytest
     - pytest-mpl
   commands:
-    - pytest --mpl-oggm --mpl-upload --pyargs oggm
+    - pytest --mpl-oggm --mpl-upload -m "not (test_googlemap or test_modelsection_withtrib)" --pyargs oggm
 ### TEST END ###
 
 about:
