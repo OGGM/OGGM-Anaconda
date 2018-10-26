@@ -32,7 +32,7 @@ requirements:
     - configobj
     - krb5
     - xarray
-    - rasterio
+    - rasterio <1.0
     - scikit-image
     - pillow
     - gdal
