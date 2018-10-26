@@ -18,7 +18,7 @@ requirements:
 
   run:
     - python
-    - matplotlib >=2.0.0
+    - matplotlib 2.1|2.1*
     - numpy
     - scipy
     - pyproj
