@@ -131,21 +131,12 @@ jobs:
       os: linux
     - stage: oggm
       script: ./ci/travis_stage_script.sh oggm
-      env: CONDA_BUILD_PY=3.7 SUB_STAGE=oggm
-      os: linux
-    - stage: oggm
-      script: ./ci/travis_stage_script.sh oggm
       env: CONDA_BUILD_PY=3.5 SUB_STAGE=oggm
       os: osx
       osx_image: xcode10
     - stage: oggm
       script: ./ci/travis_stage_script.sh oggm
       env: CONDA_BUILD_PY=3.6 SUB_STAGE=oggm
-      os: osx
-      osx_image: xcode10
-    - stage: oggm
-      script: ./ci/travis_stage_script.sh oggm
-      env: CONDA_BUILD_PY=3.7 SUB_STAGE=oggm
       os: osx
       osx_image: xcode10
     - stage: oggm
@@ -230,10 +221,6 @@ jobs:
     - stage: oggm-win
       script: ./ci/travis_stage_script.sh oggm
       env: CONDA_BUILD_PY=3.6 SUB_STAGE=oggm
-      os: windows
-    - stage: oggm-win
-      script: ./ci/travis_stage_script.sh oggm
-      env: CONDA_BUILD_PY=3.7 SUB_STAGE=oggm
       os: windows
     - stage: oggm-win
       script: ./ci/travis_stage_script.sh oggmdev
