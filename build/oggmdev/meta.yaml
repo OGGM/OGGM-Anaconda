@@ -49,7 +49,7 @@ test:
     - pytest
     - pytest-mpl
   commands:
-    - pytest -p oggm.conftest --mpl-oggm --mpl-upload --run-download --pyargs oggm
+    - pytest --mpl-oggm --mpl-upload --run-download --pyargs oggm
 ### TEST END ###
 
 about:
