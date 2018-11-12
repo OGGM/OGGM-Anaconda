@@ -29,7 +29,7 @@ STAGES="motionless salem pytest-mpl oggm-deps oggm oggmdev"
 CONDA_BUILD_PYS="3.5 3.6 3.7"
 
 for stage in $STAGES; do
-	for os in linux osx windows; do
+	for os in linux; do
 		for CONDA_BUILD_PY in $CONDA_BUILD_PYS; do
 			echo_stage $stage $os $CONDA_BUILD_PY
 		done

@@ -1,12 +1,13 @@
 package:
   name: pytest-mpl
-  version: "0.111.0.201810241653"
+  version: "0.111.0.201811121226"
 
 source:
   url: https://github.com/OGGM/pytest-mpl/tarball/ffe265810e16aaca7c03dda7e783b60ac90e7743
   fn: pytest-mpl-ffe265810e16aaca7c03dda7e783b60ac90e7743.tar.gz
 
 build:
+  noarch: python
   number: 0
   script: python setup.py install --single-version-externally-managed --record record.txt
 

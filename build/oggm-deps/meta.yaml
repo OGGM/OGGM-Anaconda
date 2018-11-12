@@ -3,6 +3,7 @@ package:
   version: "100"
 
 build:
+  noarch: python
   number: 0
 
 requirements:

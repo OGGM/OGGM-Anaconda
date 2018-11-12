@@ -1,12 +1,13 @@
 package:
   name: salem
-  version: "0.2.2.201810312345"
+  version: "0.2.2.201811121226"
 
 source:
-  url: https://github.com/fmaussion/salem/tarball/c3a4ef0324ccab470799b590ea0725a3a0a5aa56
-  fn: salem-c3a4ef0324ccab470799b590ea0725a3a0a5aa56.tar.gz
+  url: https://github.com/fmaussion/salem/tarball/e8e441bfb49d5a7e2a68d3fcdad88b9e9305975c
+  fn: salem-e8e441bfb49d5a7e2a68d3fcdad88b9e9305975c.tar.gz
 
 build:
+  noarch: python
   number: 0
   script: python setup.py install --single-version-externally-managed --record record.txt
 
