@@ -82,3 +82,27 @@ jobs:
       script: ./ci/travis_stage_script.sh oggmdev
       env: CONDA_BUILD_PY=3.7 SUB_STAGE=oggmdev
       os: linux
+    - stage: make_env
+      script: ./ci/travis_make_env_script.sh
+      env: CONDA_BUILD_PY=3.5 SUB_STAGE=oggm
+      os: linux
+    - stage: make_env
+      script: ./ci/travis_make_env_script.sh
+      env: CONDA_BUILD_PY=3.6 SUB_STAGE=oggm
+      os: linux
+    - stage: make_env
+      script: ./ci/travis_make_env_script.sh
+      env: CONDA_BUILD_PY=3.7 SUB_STAGE=oggm
+      os: linux
+    - stage: make_env
+      script: ./ci/travis_make_env_script.sh
+      env: CONDA_BUILD_PY=3.5 SUB_STAGE=oggmdev
+      os: linux
+    - stage: make_env
+      script: ./ci/travis_make_env_script.sh
+      env: CONDA_BUILD_PY=3.6 SUB_STAGE=oggmdev
+      os: linux
+    - stage: make_env
+      script: ./ci/travis_make_env_script.sh
+      env: CONDA_BUILD_PY=3.7 SUB_STAGE=oggmdev
+      os: linux
