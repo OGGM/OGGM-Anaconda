@@ -36,7 +36,8 @@ test -f "$DDIR/$ENV_FILE_NAME" && MODEV="Update" || MODEV="Add"
 mv "$ENV_FILE_NAME" "$DDIR"
 cd "$DDIR"
 git add "$ENV_FILE_NAME"
-git commit -m "$MODEV $TRAVIS_OS_NAME/$ENV_FILE_NAME"
+
+git commit -m "$MODEV $TRAVIS_OS_NAME/$ENV_FILE_NAME" || exit 0
 
 CNT=0
 while ! git push -q; do
