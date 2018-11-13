@@ -1,5 +1,5 @@
 #!/bin/bash
-cd "$(dirname "$0")"
+cd "$(dirname "$0")"/..
 
 cat .travis_head.yml > .travis.yml
 
