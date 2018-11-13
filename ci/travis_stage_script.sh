@@ -11,7 +11,7 @@ conda config --set always_yes yes --set changeps1 no
 
 CUR_NO="$(grep number: ./build/"$1"/meta.yaml | head -n1 | cut -d: -f2 | xargs)"
 CUR_VER="$(grep version: ./build/"$1"/meta.yaml | cut -d'"' -f2)"
-CUR_PY="py${CONDA_BUILD_PY/./}"
+CUR_PY="py"
 if [[ "$1" == "oggm-deps" ]]; then
 	CUR_PY="oggm"
 else
