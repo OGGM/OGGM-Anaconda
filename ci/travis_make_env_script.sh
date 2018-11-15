@@ -30,7 +30,7 @@ git config --global user.name "Travis CI"
 set +x
 git clone -q "https://${GH_TOKEN}@github.com/OGGM/OGGM-dependency-list" "/tmp/deplist_repo"
 
-DDIR="/tmp/deplist_repo/$TRAVIS_OS_NAME"
+DDIR="/tmp/deplist_repo/${TRAVIS_OS_NAME}-64"
 mkdir -p "$DDIR"
 test -f "$DDIR/$ENV_FILE_NAME" && MODEV="Update" || MODEV="Add"
 mv "$ENV_FILE_NAME" "$DDIR"
