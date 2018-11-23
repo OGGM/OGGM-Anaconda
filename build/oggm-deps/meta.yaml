@@ -4,13 +4,13 @@ package:
 
 build:
   noarch: python
-  number: 0
+  number: 1
 
 requirements:
   run:
     - python
     - matplotlib >=2.0.0
-    - numpy
+    - numpy >=1.15.2
     - scipy
     - pyproj
     - pandas
