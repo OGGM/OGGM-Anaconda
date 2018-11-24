@@ -38,6 +38,7 @@ done
 
 echo "    - stage: make_env" >> .travis.yml
 echo "      script: ./ci/appveyor_trigger_from_travis.sh" >> .travis.yml
+echo "      env: CONDA_BUILD_PY=Trigger_Appveyor" >> .travis.yml
 echo "      os: linux" >> .travis.yml
 
 for stage in oggm oggmdev; do

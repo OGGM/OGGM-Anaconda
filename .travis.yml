@@ -85,6 +85,7 @@ jobs:
       os: linux
     - stage: make_env
       script: ./ci/appveyor_trigger_from_travis.sh
+      env: CONDA_BUILD_PY=Trigger_Appveyor
       os: linux
     - stage: make_env
       script: ./ci/travis_make_env_script.sh
