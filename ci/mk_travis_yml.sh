@@ -37,7 +37,7 @@ for stage in $STAGES; do
 done
 
 for stage in oggm oggmdev; do
-	for os in linux; do
+	for os in linux osx; do
 		for CONDA_BUILD_PY in $CONDA_BUILD_PYS; do
 			[[ "$stage" == "oggm" ]] && [[ "$CONDA_BUILD_PY" == "3.7" ]] && continue
 
