@@ -36,6 +36,10 @@ for stage in $STAGES; do
 	done
 done
 
+echo "    - stage: make_env" >> .travis.yml
+echo "      script: ./ci/appveyor_trigger_from_travis.sh" >> .travis.yml
+echo "      os: linux" >> .travis.yml
+
 for stage in oggm oggmdev; do
 	for os in linux osx; do
 		for CONDA_BUILD_PY in $CONDA_BUILD_PYS; do
