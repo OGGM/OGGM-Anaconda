@@ -1,0 +1,28 @@
+image: Visual Studio 2017
+
+environment:
+  MINICONDA: "C:\\Miniconda3-x64"
+  MPLBACKEND: agg
+  GH_TOKEN:
+    secure: GNcOo1BaNBVTsgory2xBCXCLH1lBmWTUzEuJx3tsP4k7/8W2oHXmaHW9gM2rMLMq
+  matrix:
+    - CONDA_BUILD_PY: 3.5
+      SUB_STAGE: oggm
+    - CONDA_BUILD_PY: 3.6
+      SUB_STAGE: oggm
+    - CONDA_BUILD_PY: 3.5
+      SUB_STAGE: oggmdev
+    - CONDA_BUILD_PY: 3.6
+      SUB_STAGE: oggmdev
+    - CONDA_BUILD_PY: 3.7
+      SUB_STAGE: oggmdev
+
+install:
+  - cmd: "SET PATH=%MINICONDA%;%MINICONDA%\\Scripts;%PATH%"
+  - cmd: "conda config --set always_yes yes --set changeps1 no"
+  - cmd: "conda config --set anaconda_upload no"
+  - cmd: "conda update -q --all"
+  - cmd: "conda info -a"
+
+build_script:
+  - cmd: "bash ./ci/appveyor_make_env_script.sh"
