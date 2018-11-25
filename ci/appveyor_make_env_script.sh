@@ -11,7 +11,6 @@ conda install -n oggm_env -c oggm -c conda-forge "$SUB_STAGE" pytest pytest-mpl
 source activate oggm_env
 
 # Workaround for broken pyproj on Windows on conda
-conda remove --force pyproj
 pip install --upgrade --force-reinstall pyproj
 
 if [[ "$SUB_STAGE" == "oggm" ]]; then
