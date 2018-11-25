@@ -17,11 +17,11 @@ if [[ "$SUB_STAGE" == "oggm" ]]; then
 	pytest --mpl-oggm -k "not test_googlemap" --pyargs oggm
 else
 	pytest --mpl-oggm --run-download --pyargs oggm
-	conda remove --force "$SUB_STAGE"
 fi
 
 ENV_FILE_NAME="${SUB_STAGE}-$(conda list -f -e "$SUB_STAGE" | tail -n1 | cut -d= -f2)_$(date +%Y%m%d)_py${CONDA_BUILD_PY/./}.yml"
 
+[[ "$SUB_STAGE" != "oggm" ]] && conda remove --force "$SUB_STAGE" || true
 conda env export -f "$ENV_FILE_NAME"
 
 git config --global user.email "ci@appveyor.com"
