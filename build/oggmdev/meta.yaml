@@ -1,10 +1,10 @@
 package:
   name: oggmdev
-  version: "1.0.0.201811252339"
+  version: "1.0.0.201811261253"
 
 source:
-  url: https://github.com/OGGM/oggm/tarball/5c660fad2662866b16763e072ef3d38918565a32
-  fn: oggm-5c660fad2662866b16763e072ef3d38918565a32.tar.gz
+  url: https://github.com/OGGM/oggm/tarball/3ce82fe27c912d1eb8139daf313105b998669362
+  fn: oggm-3ce82fe27c912d1eb8139daf313105b998669362.tar.gz
 
 build:
   noarch: python
@@ -19,7 +19,6 @@ requirements:
   run:
     - python
     - matplotlib >=2.0.0
-    - dask
     - numpy
     - scipy
     - pyproj

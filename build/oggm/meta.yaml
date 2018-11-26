@@ -9,7 +9,7 @@ source:
 
 build:
   noarch: python
-  number: 2
+  number: 3
   script: python setup.py install --single-version-externally-managed --record record.txt
 
 requirements:
@@ -20,7 +20,6 @@ requirements:
   run:
     - python
     - matplotlib 2.1|2.1*
-    - dask
     - numpy
     - scipy
     - pyproj
