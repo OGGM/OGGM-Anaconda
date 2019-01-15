@@ -1,10 +1,10 @@
 package:
   name: salem
-  version: "0.2.2.201811261253"
+  version: "0.2.3.201901152107"
 
 source:
-  url: https://github.com/fmaussion/salem/tarball/2d10174b25bab2786c45d37c752f72a3344bffea
-  fn: salem-2d10174b25bab2786c45d37c752f72a3344bffea.tar.gz
+  url: https://github.com/fmaussion/salem/tarball/a8ab2a523317e6708eee98cc67037d9a190630e2
+  fn: salem-a8ab2a523317e6708eee98cc67037d9a190630e2.tar.gz
 
 build:
   noarch: python
@@ -21,7 +21,7 @@ requirements:
     - matplotlib >=2.0.0
     - dask
     - descartes
-    - numpy
+    - numpy >=1.15.2,<1.15.4
     - scipy
     - pyproj
     - pandas
