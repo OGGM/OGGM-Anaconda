@@ -12,9 +12,6 @@ function echo_stage() {
 	if [[ "$stage" == "oggmdev" ]]; then
 		stagename="oggm"
 	fi
-	if [[ "$stage" == "oggm" ]] && [[ "$CONDA_BUILD_PY" == "3.7" ]]; then
-		return
-	fi
 
 	echo "    - stage: ${stagename}" >> .travis.yml
 	echo "      script: ./ci/travis_stage_script.sh $stage" >> .travis.yml
