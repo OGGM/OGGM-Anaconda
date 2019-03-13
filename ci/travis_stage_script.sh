@@ -32,6 +32,9 @@ conda install -q conda-build conda-verify anaconda-client
 
 conda build --no-anaconda-upload --python "${CONDA_BUILD_PY}" --channel oggm --channel conda-forge --channel defaults --override-channels ./build/"$1" &
 CONDA_PID=$!
+
+set +x
+
 WAIT_TIME=0
 while [ -e /proc/$CONDA_PID ]; do
 	sleep 10
@@ -41,6 +44,8 @@ while [ -e /proc/$CONDA_PID ]; do
 		echo "Still waiting..."
 	fi
 done
+
+set -x
 
 for i in conda-bld/*/*.tar.bz2; do
 	anaconda -t $ANACONDA_AUTH_TOKEN upload -u oggm $i || true
