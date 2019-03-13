@@ -6,7 +6,7 @@ cd "$(dirname "$0")/.."
 export MPLBACKEND=agg
 
 conda create -n oggm_env -c oggm -c conda-forge "python=$CONDA_BUILD_PY"
-conda install -n oggm_env -c oggm -c conda-forge "$SUB_STAGE" pytest pytest-mpl
+conda install -n oggm_env -c oggm -c conda-forge "$SUB_STAGE" "python=$CONDA_BUILD_PY" pytest pytest-mpl
 
 source activate oggm_env
 
