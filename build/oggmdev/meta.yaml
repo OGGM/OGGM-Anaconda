@@ -1,6 +1,6 @@
 package:
   name: oggmdev
-  version: "1.0.0.201903131449"
+  version: "1.1.0.201903131449"
 
 source:
   url: https://github.com/OGGM/oggm/tarball/f0768d867ca39dce6d605214591d76696bc88553
