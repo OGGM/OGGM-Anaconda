@@ -16,71 +16,71 @@ jobs:
     - os: windows
   include:
     - stage: motionless
-      script: travis_wait 50 ./ci/travis_stage_script.sh motionless
+      script: ./ci/travis_stage_script.sh motionless
       env: CONDA_BUILD_PY=3.5 SUB_STAGE=motionless
       os: linux
     - stage: motionless
-      script: travis_wait 50 ./ci/travis_stage_script.sh motionless
+      script: ./ci/travis_stage_script.sh motionless
       env: CONDA_BUILD_PY=3.6 SUB_STAGE=motionless
       os: linux
     - stage: motionless
-      script: travis_wait 50 ./ci/travis_stage_script.sh motionless
+      script: ./ci/travis_stage_script.sh motionless
       env: CONDA_BUILD_PY=3.7 SUB_STAGE=motionless
       os: linux
     - stage: salem
-      script: travis_wait 50 ./ci/travis_stage_script.sh salem
+      script: ./ci/travis_stage_script.sh salem
       env: CONDA_BUILD_PY=3.5 SUB_STAGE=salem
       os: linux
     - stage: salem
-      script: travis_wait 50 ./ci/travis_stage_script.sh salem
+      script: ./ci/travis_stage_script.sh salem
       env: CONDA_BUILD_PY=3.6 SUB_STAGE=salem
       os: linux
     - stage: salem
-      script: travis_wait 50 ./ci/travis_stage_script.sh salem
+      script: ./ci/travis_stage_script.sh salem
       env: CONDA_BUILD_PY=3.7 SUB_STAGE=salem
       os: linux
     - stage: pytest-mpl
-      script: travis_wait 50 ./ci/travis_stage_script.sh pytest-mpl
+      script: ./ci/travis_stage_script.sh pytest-mpl
       env: CONDA_BUILD_PY=3.5 SUB_STAGE=pytest-mpl
       os: linux
     - stage: pytest-mpl
-      script: travis_wait 50 ./ci/travis_stage_script.sh pytest-mpl
+      script: ./ci/travis_stage_script.sh pytest-mpl
       env: CONDA_BUILD_PY=3.6 SUB_STAGE=pytest-mpl
       os: linux
     - stage: pytest-mpl
-      script: travis_wait 50 ./ci/travis_stage_script.sh pytest-mpl
+      script: ./ci/travis_stage_script.sh pytest-mpl
       env: CONDA_BUILD_PY=3.7 SUB_STAGE=pytest-mpl
       os: linux
     - stage: oggm-deps
-      script: travis_wait 50 ./ci/travis_stage_script.sh oggm-deps
+      script: ./ci/travis_stage_script.sh oggm-deps
       env: CONDA_BUILD_PY=3.5 SUB_STAGE=oggm-deps
       os: linux
     - stage: oggm-deps
-      script: travis_wait 50 ./ci/travis_stage_script.sh oggm-deps
+      script: ./ci/travis_stage_script.sh oggm-deps
       env: CONDA_BUILD_PY=3.6 SUB_STAGE=oggm-deps
       os: linux
     - stage: oggm-deps
-      script: travis_wait 50 ./ci/travis_stage_script.sh oggm-deps
+      script: ./ci/travis_stage_script.sh oggm-deps
       env: CONDA_BUILD_PY=3.7 SUB_STAGE=oggm-deps
       os: linux
     - stage: oggm
-      script: travis_wait 50 ./ci/travis_stage_script.sh oggm
+      script: ./ci/travis_stage_script.sh oggm
       env: CONDA_BUILD_PY=3.5 SUB_STAGE=oggm
       os: linux
     - stage: oggm
-      script: travis_wait 50 ./ci/travis_stage_script.sh oggm
+      script: ./ci/travis_stage_script.sh oggm
       env: CONDA_BUILD_PY=3.6 SUB_STAGE=oggm
       os: linux
     - stage: oggm
-      script: travis_wait 50 ./ci/travis_stage_script.sh oggmdev
+      script: ./ci/travis_stage_script.sh oggmdev
       env: CONDA_BUILD_PY=3.5 SUB_STAGE=oggmdev
       os: linux
     - stage: oggm
-      script: travis_wait 50 ./ci/travis_stage_script.sh oggmdev
+      script: ./ci/travis_stage_script.sh oggmdev
       env: CONDA_BUILD_PY=3.6 SUB_STAGE=oggmdev
       os: linux
     - stage: oggm
-      script: travis_wait 50 ./ci/travis_stage_script.sh oggmdev
+      script: ./ci/travis_stage_script.sh oggmdev
       env: CONDA_BUILD_PY=3.7 SUB_STAGE=oggmdev
       os: linux
     - stage: make_env
@@ -88,47 +88,47 @@ jobs:
       env: CONDA_BUILD_PY=Trigger_Appveyor
       os: linux
     - stage: make_env
-      script: travis_wait 50 ./ci/travis_make_env_script.sh
+      script: ./ci/travis_make_env_script.sh
       env: CONDA_BUILD_PY=3.5 SUB_STAGE=oggm
       os: linux
     - stage: make_env
-      script: travis_wait 50 ./ci/travis_make_env_script.sh
+      script: ./ci/travis_make_env_script.sh
       env: CONDA_BUILD_PY=3.6 SUB_STAGE=oggm
       os: linux
     - stage: make_env
-      script: travis_wait 50 ./ci/travis_make_env_script.sh
+      script: ./ci/travis_make_env_script.sh
       env: CONDA_BUILD_PY=3.5 SUB_STAGE=oggm
       os: osx
       osx_image: xcode10.1
     - stage: make_env
-      script: travis_wait 50 ./ci/travis_make_env_script.sh
+      script: ./ci/travis_make_env_script.sh
       env: CONDA_BUILD_PY=3.6 SUB_STAGE=oggm
       os: osx
       osx_image: xcode10.1
     - stage: make_env
-      script: travis_wait 50 ./ci/travis_make_env_script.sh
+      script: ./ci/travis_make_env_script.sh
       env: CONDA_BUILD_PY=3.5 SUB_STAGE=oggmdev
       os: linux
     - stage: make_env
-      script: travis_wait 50 ./ci/travis_make_env_script.sh
+      script: ./ci/travis_make_env_script.sh
       env: CONDA_BUILD_PY=3.6 SUB_STAGE=oggmdev
       os: linux
     - stage: make_env
-      script: travis_wait 50 ./ci/travis_make_env_script.sh
+      script: ./ci/travis_make_env_script.sh
       env: CONDA_BUILD_PY=3.7 SUB_STAGE=oggmdev
       os: linux
     - stage: make_env
-      script: travis_wait 50 ./ci/travis_make_env_script.sh
+      script: ./ci/travis_make_env_script.sh
       env: CONDA_BUILD_PY=3.5 SUB_STAGE=oggmdev
       os: osx
       osx_image: xcode10.1
     - stage: make_env
-      script: travis_wait 50 ./ci/travis_make_env_script.sh
+      script: ./ci/travis_make_env_script.sh
       env: CONDA_BUILD_PY=3.6 SUB_STAGE=oggmdev
       os: osx
       osx_image: xcode10.1
     - stage: make_env
-      script: travis_wait 50 ./ci/travis_make_env_script.sh
+      script: ./ci/travis_make_env_script.sh
       env: CONDA_BUILD_PY=3.7 SUB_STAGE=oggmdev
       os: osx
       osx_image: xcode10.1

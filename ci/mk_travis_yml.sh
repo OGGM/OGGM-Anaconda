@@ -17,7 +17,7 @@ function echo_stage() {
 	fi
 
 	echo "    - stage: ${stagename}" >> .travis.yml
-	echo "      script: travis_wait 50 ./ci/travis_stage_script.sh $stage" >> .travis.yml
+	echo "      script: ./ci/travis_stage_script.sh $stage" >> .travis.yml
 	echo "      env: CONDA_BUILD_PY=$CONDA_BUILD_PY SUB_STAGE=$stage" >> .travis.yml
 	echo "      os: $os" >> .travis.yml
 	if [[ "$os" == "osx" ]]; then
@@ -47,7 +47,7 @@ for stage in oggm oggmdev; do
 			[[ "$stage" == "oggm" ]] && [[ "$CONDA_BUILD_PY" == "3.7" ]] && continue
 
 			echo "    - stage: make_env" >> .travis.yml
-			echo "      script: travis_wait 50 ./ci/travis_make_env_script.sh" >> .travis.yml
+			echo "      script: ./ci/travis_make_env_script.sh" >> .travis.yml
 			echo "      env: CONDA_BUILD_PY=$CONDA_BUILD_PY SUB_STAGE=$stage" >> .travis.yml
 			echo "      os: $os" >> .travis.yml
 			if [[ "$os" == "osx" ]]; then
