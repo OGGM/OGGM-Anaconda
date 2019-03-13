@@ -21,7 +21,7 @@ function echo_stage() {
 	echo "      env: CONDA_BUILD_PY=$CONDA_BUILD_PY SUB_STAGE=$stage" >> .travis.yml
 	echo "      os: $os" >> .travis.yml
 	if [[ "$os" == "osx" ]]; then
-		echo "      osx_image: xcode10" >> .travis.yml
+		echo "      osx_image: xcode10.1" >> .travis.yml
 	fi
 }
 
@@ -51,7 +51,7 @@ for stage in oggm oggmdev; do
 			echo "      env: CONDA_BUILD_PY=$CONDA_BUILD_PY SUB_STAGE=$stage" >> .travis.yml
 			echo "      os: $os" >> .travis.yml
 			if [[ "$os" == "osx" ]]; then
-				echo "      osx_image: xcode10" >> .travis.yml
+				echo "      osx_image: xcode10.1" >> .travis.yml
 			fi
 		done
 	done
