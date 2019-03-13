@@ -25,6 +25,7 @@ if [[ "$(echo $LATEST_VER | cut -d' ' -f2)" == "$CUR_VER" ]] && [[ "$(echo $LATE
 fi
 
 conda update -q conda
+conda config --set channel_priority strict
 conda update -q --all
 conda info -a
 conda install -q conda-build conda-verify anaconda-client

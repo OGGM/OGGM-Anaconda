@@ -7,7 +7,10 @@ export MPLBACKEND=agg
 
 source ./ci/install_miniconda.sh
 
-conda config --set always_yes yes --set changeps1 no
+conda config --set always_yes yes --set changeps1 no 
+conda update -q conda
+conda update -q --all
+conda config --set channel_priority strict
 
 conda create -n oggm_env -c oggm -c conda-forge "python=$CONDA_BUILD_PY"
 source activate oggm_env
