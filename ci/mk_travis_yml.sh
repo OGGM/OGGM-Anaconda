@@ -44,8 +44,6 @@ echo "      os: linux" >> .travis.yml
 for stage in oggm oggmdev; do
 	for os in linux osx; do
 		for CONDA_BUILD_PY in $CONDA_BUILD_PYS; do
-			[[ "$stage" == "oggm" ]] && [[ "$CONDA_BUILD_PY" == "3.7" ]] && continue
-
 			echo "    - stage: make_env" >> .travis.yml
 			echo "      script: ./ci/travis_make_env_script.sh" >> .travis.yml
 			echo "      env: CONDA_BUILD_PY=$CONDA_BUILD_PY SUB_STAGE=$stage" >> .travis.yml
