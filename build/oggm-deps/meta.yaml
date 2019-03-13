@@ -4,13 +4,13 @@ package:
 
 build:
   noarch: python
-  number: 4
+  number: 5
 
 requirements:
   run:
     - python
-    - matplotlib >=2.0.0
-    - numpy >=1.15.2,<1.15.4
+    - matplotlib >=3.0.0
+    - numpy >=1.16
     - scipy
     - pyproj
     - pandas
@@ -23,7 +23,7 @@ requirements:
     - configobj
     - krb5
     - xarray
-    - rasterio
+    - rasterio >=1.0
     - scikit-image
     - pillow
     - gdal

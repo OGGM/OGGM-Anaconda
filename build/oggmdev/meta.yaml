@@ -1,6 +1,6 @@
 package:
   name: oggmdev
-  version: "1.0.0.201903071340"
+  version: "1.0.0.201903131449"
 
 source:
   url: https://github.com/OGGM/oggm/tarball/f0768d867ca39dce6d605214591d76696bc88553
@@ -18,8 +18,8 @@ requirements:
 
   run:
     - python
-    - matplotlib >=2.0.0
-    - numpy >=1.15.2,<1.15.4
+    - matplotlib >=3.0.0
+    - numpy >=1.16
     - scipy
     - pyproj
     - pandas
@@ -32,7 +32,7 @@ requirements:
     - configobj
     - krb5
     - xarray
-    - rasterio
+    - rasterio >=1.0
     - scikit-image
     - pillow
     - gdal
