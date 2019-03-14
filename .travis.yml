@@ -17,19 +17,11 @@ jobs:
   include:
     - stage: motionless
       script: ./ci/travis_stage_script.sh motionless
-      env: CONDA_BUILD_PY=3.5 SUB_STAGE=motionless
-      os: linux
-    - stage: motionless
-      script: ./ci/travis_stage_script.sh motionless
       env: CONDA_BUILD_PY=3.6 SUB_STAGE=motionless
       os: linux
     - stage: motionless
       script: ./ci/travis_stage_script.sh motionless
       env: CONDA_BUILD_PY=3.7 SUB_STAGE=motionless
-      os: linux
-    - stage: salem
-      script: ./ci/travis_stage_script.sh salem
-      env: CONDA_BUILD_PY=3.5 SUB_STAGE=salem
       os: linux
     - stage: salem
       script: ./ci/travis_stage_script.sh salem
@@ -41,19 +33,11 @@ jobs:
       os: linux
     - stage: pytest-mpl
       script: ./ci/travis_stage_script.sh pytest-mpl
-      env: CONDA_BUILD_PY=3.5 SUB_STAGE=pytest-mpl
-      os: linux
-    - stage: pytest-mpl
-      script: ./ci/travis_stage_script.sh pytest-mpl
       env: CONDA_BUILD_PY=3.6 SUB_STAGE=pytest-mpl
       os: linux
     - stage: pytest-mpl
       script: ./ci/travis_stage_script.sh pytest-mpl
       env: CONDA_BUILD_PY=3.7 SUB_STAGE=pytest-mpl
-      os: linux
-    - stage: oggm-deps
-      script: ./ci/travis_stage_script.sh oggm-deps
-      env: CONDA_BUILD_PY=3.5 SUB_STAGE=oggm-deps
       os: linux
     - stage: oggm-deps
       script: ./ci/travis_stage_script.sh oggm-deps
@@ -65,19 +49,11 @@ jobs:
       os: linux
     - stage: oggm
       script: ./ci/travis_stage_script.sh oggm
-      env: CONDA_BUILD_PY=3.5 SUB_STAGE=oggm
-      os: linux
-    - stage: oggm
-      script: ./ci/travis_stage_script.sh oggm
       env: CONDA_BUILD_PY=3.6 SUB_STAGE=oggm
       os: linux
     - stage: oggm
       script: ./ci/travis_stage_script.sh oggm
       env: CONDA_BUILD_PY=3.7 SUB_STAGE=oggm
-      os: linux
-    - stage: oggm
-      script: ./ci/travis_stage_script.sh oggmdev
-      env: CONDA_BUILD_PY=3.5 SUB_STAGE=oggmdev
       os: linux
     - stage: oggm
       script: ./ci/travis_stage_script.sh oggmdev
@@ -93,21 +69,12 @@ jobs:
       os: linux
     - stage: make_env
       script: ./ci/travis_make_env_script.sh
-      env: CONDA_BUILD_PY=3.5 SUB_STAGE=oggm
-      os: linux
-    - stage: make_env
-      script: ./ci/travis_make_env_script.sh
       env: CONDA_BUILD_PY=3.6 SUB_STAGE=oggm
       os: linux
     - stage: make_env
       script: ./ci/travis_make_env_script.sh
       env: CONDA_BUILD_PY=3.7 SUB_STAGE=oggm
       os: linux
-    - stage: make_env
-      script: ./ci/travis_make_env_script.sh
-      env: CONDA_BUILD_PY=3.5 SUB_STAGE=oggm
-      os: osx
-      osx_image: xcode10.1
     - stage: make_env
       script: ./ci/travis_make_env_script.sh
       env: CONDA_BUILD_PY=3.6 SUB_STAGE=oggm
@@ -118,10 +85,6 @@ jobs:
       env: CONDA_BUILD_PY=3.7 SUB_STAGE=oggm
       os: osx
       osx_image: xcode10.1
-    - stage: make_env
-      script: ./ci/travis_make_env_script.sh
-      env: CONDA_BUILD_PY=3.5 SUB_STAGE=oggmdev
-      os: linux
     - stage: make_env
       script: ./ci/travis_make_env_script.sh
       env: CONDA_BUILD_PY=3.6 SUB_STAGE=oggmdev
@@ -130,11 +93,6 @@ jobs:
       script: ./ci/travis_make_env_script.sh
       env: CONDA_BUILD_PY=3.7 SUB_STAGE=oggmdev
       os: linux
-    - stage: make_env
-      script: ./ci/travis_make_env_script.sh
-      env: CONDA_BUILD_PY=3.5 SUB_STAGE=oggmdev
-      os: osx
-      osx_image: xcode10.1
     - stage: make_env
       script: ./ci/travis_make_env_script.sh
       env: CONDA_BUILD_PY=3.6 SUB_STAGE=oggmdev

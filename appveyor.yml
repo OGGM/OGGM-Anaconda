@@ -1,24 +1,15 @@
 image: Visual Studio 2017
 
-matrix:
-  allow_failures:
-    - CONDA_BUILD_PY: 3.7
-      SUB_STAGE: oggmdev
-
 environment:
   MINICONDA: "C:\\Miniconda3-x64"
   MPLBACKEND: agg
   GH_TOKEN:
     secure: GNcOo1BaNBVTsgory2xBCXCLH1lBmWTUzEuJx3tsP4k7/8W2oHXmaHW9gM2rMLMq
   matrix:
-    - CONDA_BUILD_PY: 3.5
-      SUB_STAGE: oggm
     - CONDA_BUILD_PY: 3.6
       SUB_STAGE: oggm
     - CONDA_BUILD_PY: 3.7
       SUB_STAGE: oggm
-    - CONDA_BUILD_PY: 3.5
-      SUB_STAGE: oggmdev
     - CONDA_BUILD_PY: 3.6
       SUB_STAGE: oggmdev
     - CONDA_BUILD_PY: 3.7
