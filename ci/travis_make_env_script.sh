@@ -41,6 +41,11 @@ mv "$ENV_FILE_NAME" "$DDIR"
 cd "$DDIR"
 git add "$ENV_FILE_NAME"
 
+LATEST_ENV_FILE="${SUB_STAGE}-latest_py${CONDA_BUILD_PY/./}.yml"
+rm -f "$LATEST_ENV_FILE"
+ln -s "$ENV_FILE_NAME" "$LATEST_ENV_FILE"
+git add "$LATEST_ENV_FILE"
+
 git commit -m "$MODEV $TRAVIS_OS_NAME/$ENV_FILE_NAME" || exit 0
 
 CNT=0
