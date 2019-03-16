@@ -11,9 +11,9 @@ conda install -n oggm_env -c oggm -c conda-forge "$SUB_STAGE" "python=$CONDA_BUI
 source activate oggm_env
 
 if [[ "$SUB_STAGE" == "oggm" ]]; then
-	pytest --mpl-oggm -k "not test_googlemap" --pyargs oggm
+	pytest --mpl-oggm --mpl-upload -k "not test_googlemap" --pyargs oggm
 else
-	pytest --mpl-oggm --run-download --pyargs oggm
+	pytest --mpl-oggm --mpl-upload --run-download --pyargs oggm
 fi
 
 ENV_FILE_NAME="${SUB_STAGE}-$(conda list -f -e "$SUB_STAGE" | tail -n1 | cut -d= -f2)_$(date +%Y%m%d)_py${CONDA_BUILD_PY/./}.yml"
