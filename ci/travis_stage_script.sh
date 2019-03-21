@@ -45,6 +45,8 @@ while [ -e /proc/$CONDA_PID ]; do
 	fi
 done
 
+wait $CONDA_PID
+
 set -x
 
 for i in conda-bld/*/*.tar.bz2; do
