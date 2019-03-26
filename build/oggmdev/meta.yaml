@@ -1,10 +1,10 @@
 package:
   name: oggmdev
-  version: "1.1.0.201903212319"
+  version: "1.1.0.201903261531"
 
 source:
-  url: https://github.com/OGGM/oggm/tarball/8c0b24da52d27b8f11f8fc1ca6c4c352540ee190
-  fn: oggm-8c0b24da52d27b8f11f8fc1ca6c4c352540ee190.tar.gz
+  url: https://github.com/OGGM/oggm/tarball/d6f4265a1be6ed928b8c98fb75ee8acfd1b3dcda
+  fn: oggm-d6f4265a1be6ed928b8c98fb75ee8acfd1b3dcda.tar.gz
 
 build:
   noarch: python
