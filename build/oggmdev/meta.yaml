@@ -12,10 +12,11 @@ build:
   script: python setup.py install --single-version-externally-managed --record record.txt
 
 requirements:
-  build:
+  host:
     - python
     - setuptools
-
+    - setuptools_scm
+    - setuptools_scm_git_archive
   run:
     - python
     - matplotlib >=3.0.0
