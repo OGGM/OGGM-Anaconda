@@ -20,7 +20,7 @@ conda install -c oggm -c conda-forge "$SUB_STAGE" "python=$CONDA_BUILD_PY" pytes
 if [[ "$SUB_STAGE" == "oggm" ]]; then
 	pytest --mpl-oggm --mpl-upload -k "not test_googlemap" --pyargs oggm
 else
-	pytest --mpl-oggm --mpl-upload --run-download --pyargs oggm
+	pytest --mpl-oggm --mpl-upload --pyargs oggm
 fi
 
 ENV_FILE_NAME="${SUB_STAGE}-$(conda list -f -e "$SUB_STAGE" | tail -n1 | cut -d= -f2)_$(date +%Y%m%d)_py${CONDA_BUILD_PY/./}.yml"
