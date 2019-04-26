@@ -20,7 +20,6 @@ install:
   - cmd: "conda config --set always_yes yes --set changeps1 no --set anaconda_upload no"
   - cmd: "conda update -q conda"
   - cmd: "conda update -q --all"
-  - cmd: "conda config --set channel_priority strict"
   - cmd: "conda info -a"
 
 build_script:
