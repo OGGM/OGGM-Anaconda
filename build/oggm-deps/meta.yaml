@@ -4,7 +4,7 @@ package:
 
 build:
   noarch: python
-  number: 5
+  number: 6
 
 requirements:
   run:
@@ -30,7 +30,6 @@ requirements:
     - progressbar2
     - filelock
     - py
-    - boto3
     - cython
     - requests
 
