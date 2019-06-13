@@ -9,7 +9,7 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: python setup.py install --single-version-externally-managed --record record.txt
 
 requirements:
@@ -23,7 +23,7 @@ requirements:
     - matplotlib >=3.0
     - numpy >=1.16
     - scipy
-    - pyproj
+    - pyproj <2.0
     - pandas
     - joblib
     - geopandas

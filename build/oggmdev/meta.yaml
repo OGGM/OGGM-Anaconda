@@ -1,10 +1,10 @@
 package:
   name: oggmdev
-  version: "1.2.0.201906131138"
+  version: "1.2.0.201906131428"
 
 source:
   git_url: https://github.com/OGGM/oggm.git
-  git_rev: eeca6397283fb75cb0796b0fe4586d5481f3ede5
+  git_rev: 8ff54d5d0a3549a1e94ec31d246094f7dbd80c1e
 
 build:
   noarch: python
@@ -22,7 +22,7 @@ requirements:
     - matplotlib >=3.0.0
     - numpy >=1.16
     - scipy
-    - pyproj
+    - pyproj <2.0
     - pandas
     - joblib
     - geopandas

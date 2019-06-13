@@ -4,7 +4,7 @@ package:
 
 build:
   noarch: python
-  number: 6
+  number: 7
 
 requirements:
   run:
@@ -12,7 +12,7 @@ requirements:
     - matplotlib >=3.0.0
     - numpy >=1.16
     - scipy
-    - pyproj
+    - pyproj <2.0
     - pandas
     - joblib
     - geopandas
