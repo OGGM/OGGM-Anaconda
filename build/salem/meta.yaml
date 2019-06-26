@@ -1,10 +1,10 @@
 package:
   name: salem
-  version: "0.2.4.201906131428"
+  version: "0.2.4.201906261358"
 
 source:
-  url: https://github.com/fmaussion/salem/tarball/ab27b54a8d225e86e63fd11ac17122af5aa1ddf2
-  fn: salem-ab27b54a8d225e86e63fd11ac17122af5aa1ddf2.tar.gz
+  url: https://github.com/fmaussion/salem/tarball/8aa039c92d9ad8a2277c45eeb0b0a8de83104cf5
+  fn: salem-8aa039c92d9ad8a2277c45eeb0b0a8de83104cf5.tar.gz
 
 build:
   noarch: python
@@ -23,7 +23,7 @@ requirements:
     - descartes
     - numpy >=1.16
     - scipy
-    - pyproj <2.0
+    - pyproj !=2.0.*,!=2.1.*
     - pandas
     - joblib
     - xarray
