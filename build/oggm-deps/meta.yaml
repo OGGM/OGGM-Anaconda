@@ -4,17 +4,19 @@ package:
 
 build:
   noarch: python
-  number: 8
+  number: 9
 
 requirements:
   run:
-    - python
+    - python >=3.5
     - matplotlib >=3.0.0
     - numpy >=1.16
     - scipy
     - pyproj !=2.0.*,!=2.1.*
     - pandas
     - joblib
+    - dask
+    - distributed
     - geopandas
     - motionless
     - salem
