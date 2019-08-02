@@ -1,10 +1,10 @@
 package:
   name: oggmdev
-  version: "1.2.0.201908021141"
+  version: "1.2.0.201908021451"
 
 source:
   git_url: https://github.com/OGGM/oggm.git
-  git_rev: 5d06d783fe00578086e267ae94996d9b928e0e43
+  git_rev: 3146cef25eb32770b71a2fee6c60cfd717d0b469
 
 build:
   noarch: python
