@@ -1,10 +1,10 @@
 package:
   name: oggmdev
-  version: "1.2.0.201908011343"
+  version: "1.2.0.201908021141"
 
 source:
   git_url: https://github.com/OGGM/oggm.git
-  git_rev: eb21a6c7cdc722f5b853d6d65c554e7b611cde3a
+  git_rev: 5d06d783fe00578086e267ae94996d9b928e0e43
 
 build:
   noarch: python
@@ -19,7 +19,7 @@ requirements:
     - setuptools_scm_git_archive
   run:
     - python
-    - matplotlib >=3.0.0
+    - matplotlib >=3.0.0,!=3.1.0*,!=3.1.0,!=3.1.1
     - numpy >=1.16
     - scipy
     - pyproj !=2.0.*,!=2.1.*
