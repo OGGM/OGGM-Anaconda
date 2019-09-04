@@ -15,8 +15,10 @@ conda config --set channel_priority strict
 conda create -n oggm_env -c oggm -c conda-forge "python=$CONDA_BUILD_PY"
 source activate oggm_env
 
-SUB_STAGE_VERSION="$(sed -rn 's/.*version: .*"(.*)".*/\1/p' "build/${SUB_STAGE}/meta.yaml")"
-conda install -c oggm -c conda-forge "${SUB_STAGE}=${SUB_STAGE_VERSION}" "python=$CONDA_BUILD_PY" pytest pytest-mpl
+SUB_STAGE_VERSION="$(sed -En 's/.*version: .*"(.*)".*/\1/p' "build/${SUB_STAGE}/meta.yaml")"
+SUB_STAGE_BUILD="$(sed -En 's/.*number: [^0-9]*([0-9]+)[^0-9]*/\1/p' "build/${SUB_STAGE}/meta.yaml")"
+
+conda install -c oggm -c conda-forge "${SUB_STAGE}=${SUB_STAGE_VERSION}=py_${SUB_STAGE_BUILD}" "python=$CONDA_BUILD_PY" pytest pytest-mpl
 
 if [[ "$SUB_STAGE" == "oggm" ]]; then
 	pytest --mpl-oggm --mpl-upload -k "not test_googlemap" --pyargs oggm
