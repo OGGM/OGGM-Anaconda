@@ -1,10 +1,10 @@
 package:
   name: salem
-  version: "0.2.4.201908021451"
+  version: "0.2.4.201909041313"
 
 source:
-  url: https://github.com/fmaussion/salem/tarball/69666acbb73ee983a19fbe88f02a2cfdc5727980
-  fn: salem-69666acbb73ee983a19fbe88f02a2cfdc5727980.tar.gz
+  url: https://github.com/fmaussion/salem/tarball/cd18a7fc746c69dcf6b22bc02e666c570cf36564
+  fn: salem-cd18a7fc746c69dcf6b22bc02e666c570cf36564.tar.gz
 
 build:
   noarch: python
