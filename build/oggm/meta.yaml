@@ -1,15 +1,15 @@
 package:
   name: oggm
-  version: "1.1.1"
+  version: "1.1.2"
 
 source:
-  url: https://pypi.io/packages/source/o/oggm/oggm-1.1.1.tar.gz
-  fn: oggm-1.1.1.tar.gz
-  sha256: afcf22661d62b2290f4c7b201eece2ea33959b86d27b99266c1de95af982c1f0
+  url: https://pypi.io/packages/source/o/oggm/oggm-1.1.2.tar.gz
+  fn: oggm-1.1.2.tar.gz
+  sha256: f158afef8d475dafec20e4724ac5a5cb22a11e9524918436301dd616254747e0
 
 build:
   noarch: python
-  number: 2
+  number: 0
   script: python setup.py install --single-version-externally-managed --record record.txt
 
 requirements:
@@ -20,12 +20,14 @@ requirements:
     - setuptools_scm_git_archive
   run:
     - python
-    - matplotlib >=3.0,!=3.1.0*,!=3.1.0,!=3.1.1
-    - numpy >=1.16,<1.17
+    - matplotlib >=3.0.0,!=3.1.0*,!=3.1.0,!=3.1.1
+    - numpy >=1.16
     - scipy
-    - pyproj <2.0
+    - pyproj !=2.0.*,!=2.1.*,<2.3
     - pandas
     - joblib
+    - dask
+    - distributed
     - geopandas
     - motionless
     - salem
@@ -41,7 +43,6 @@ requirements:
     - progressbar2
     - filelock
     - py
-    - boto3
     - cython
     - requests
 
