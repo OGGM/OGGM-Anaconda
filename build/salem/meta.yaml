@@ -1,6 +1,6 @@
 package:
   name: salem
-  version: "0.2.4.201909171239"
+  version: "0.2.4.201910091415"
 
 source:
   url: https://github.com/fmaussion/salem/tarball/6b63c4e4e3ed4e7c13070abdb811ebccda0ea135
@@ -23,7 +23,7 @@ requirements:
     - descartes
     - numpy >=1.16
     - scipy
-    - pyproj !=2.0.*,!=2.1.*,<2.3
+    - pyproj !=2.0.*,!=2.1.*,!=2.2.*,!=2.3.*
     - pandas
     - joblib
     - xarray
