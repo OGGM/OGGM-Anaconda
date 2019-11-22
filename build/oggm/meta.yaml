@@ -9,7 +9,7 @@ source:
 
 build:
   noarch: python
-  number: 2
+  number: 3
   script: python setup.py install --single-version-externally-managed --record record.txt
 
 requirements:
@@ -35,8 +35,8 @@ requirements:
     - gdal
     - configobj
     - krb5
-    - xarray
-    - cftime <1.0.4
+    - xarray >=0.14.1
+    - cftime
     - rasterio >=1.0
     - scikit-image
     - pillow

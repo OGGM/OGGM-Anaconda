@@ -19,7 +19,7 @@ requirements:
     - setuptools_scm_git_archive
   run:
     - python
-    - matplotlib >=3.0.0,!=3.1.0*,!=3.1.0,!=3.1.1
+    - matplotlib >=3.1.2
     - numpy >=1.16,<1.17
     - scipy
     - pyproj !=2.0.*,!=2.1.*,!=2.2.*,!=2.3.*
@@ -34,8 +34,8 @@ requirements:
     - gdal
     - configobj
     - krb5
-    - xarray
-    - cftime <1.0.4
+    - xarray >=0.14.1
+    - cftime
     - rasterio >=1.0
     - scikit-image
     - pillow
