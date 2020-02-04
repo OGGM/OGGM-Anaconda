@@ -4,6 +4,7 @@ set -xe
 cd "$(dirname "$0")/.."
 
 export MPLBACKEND=agg
+export OGGM_USE_MP_SPAWN=1
 
 source ./ci/install_miniconda.sh
 
