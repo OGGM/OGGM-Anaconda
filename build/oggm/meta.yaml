@@ -9,7 +9,7 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: python setup.py install --single-version-externally-managed --record record.txt
 
 requirements:
@@ -23,7 +23,8 @@ requirements:
     - matplotlib >=3.1.2
     - numpy >=1.16,<1.17
     - scipy
-    - pyproj !=2.0.*,!=2.1.*,!=2.2.*,!=2.3.*,!=2.6.*
+    - pyproj >=2.6
+    - proj >=7.0
     - pandas
     - joblib
     - dask

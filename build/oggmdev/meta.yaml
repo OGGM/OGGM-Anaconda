@@ -1,6 +1,6 @@
 package:
   name: oggmdev
-  version: "1.2.0.202003261340"
+  version: "1.2.0.202003261346"
 
 source:
   git_url: https://github.com/OGGM/oggm.git
@@ -22,7 +22,8 @@ requirements:
     - matplotlib >=3.1.2
     - numpy >=1.16,<1.17
     - scipy
-    - pyproj !=2.0.*,!=2.1.*,!=2.2.*,!=2.3.*,!=2.6.*
+    - pyproj >=2.6
+    - proj >=7.0
     - pytables
     - pandas
     - joblib
