@@ -1,11 +1,11 @@
 package:
   name: oggm
-  version: "1.3.0"
+  version: "1.3.1"
 
 source:
-  url: https://pypi.io/packages/source/o/oggm/oggm-1.3.0.tar.gz
-  fn: oggm-1.3.0.tar.gz
-  sha256: 4450fdc3d17fd9740e91368fc37af25ab22f9d4036753b5ce26f330e51e8c7da
+  url: https://pypi.io/packages/source/o/oggm/oggm-1.3.1.tar.gz
+  fn: oggm-1.3.1.tar.gz
+  sha256: 4d7a212a29e4b97eb83cb8bce1286c99f0387b132e28c920e35690142c72cce5
 
 build:
   noarch: python
@@ -23,7 +23,7 @@ requirements:
     - matplotlib >=3.1.2
     - numpy >=1.16,<1.17
     - scipy
-    - pyproj !=2.0.*,!=2.1.*,!=2.2.*,!=2.3.*
+    - pyproj !=2.0.*,!=2.1.*,!=2.2.*,!=2.3.*,!=2.6.*
     - pandas
     - joblib
     - dask
