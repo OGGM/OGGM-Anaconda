@@ -1,10 +1,10 @@
 package:
   name: oggmdev
-  version: "1.2.0.202003231719"
+  version: "1.2.0.202003261340"
 
 source:
   git_url: https://github.com/OGGM/oggm.git
-  git_rev: 715286030e89bb5aea3c62f2221bfcdf3abf2326
+  git_rev: 4436fa061d76b1b113412f220406fc89fdc93766
 
 build:
   noarch: python
@@ -22,7 +22,7 @@ requirements:
     - matplotlib >=3.1.2
     - numpy >=1.16,<1.17
     - scipy
-    - pyproj !=2.0.*,!=2.1.*,!=2.2.*,!=2.3.*
+    - pyproj !=2.0.*,!=2.1.*,!=2.2.*,!=2.3.*,!=2.6.*
     - pytables
     - pandas
     - joblib
