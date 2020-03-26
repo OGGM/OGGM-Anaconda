@@ -4,15 +4,15 @@ package:
 
 build:
   noarch: python
-  number: 17
+  number: 18
 
 requirements:
   run:
     - python >=3.6
     - matplotlib >=3.1.2
-    - numpy >=1.16,<1.17
+    - numpy >=1.16
     - scipy
-    - pyproj >=2.4,<2.5
+    - pyproj >=2.4
     - pandas
     - joblib
     - dask
