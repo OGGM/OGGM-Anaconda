@@ -11,15 +11,15 @@ source ./ci/install_miniconda.sh
 conda config --set always_yes yes --set changeps1 no 
 conda update -q conda
 conda update -q --all
-conda config --set channel_priority strict
-
-conda create -n oggm_env -c oggm -c conda-forge -c defaults "python=$CONDA_BUILD_PY"
-source activate oggm_env
 
 SUB_STAGE_VERSION="$(sed -En 's/.*version: .*"(.*)".*/\1/p' "build/${SUB_STAGE}/meta.yaml")"
 SUB_STAGE_BUILD="$(sed -En 's/.*number: [^0-9]*([0-9]+)[^0-9]*/\1/p' "build/${SUB_STAGE}/meta.yaml")"
 
-conda install -c oggm -c conda-forge -c defaults "${SUB_STAGE}=${SUB_STAGE_VERSION}=py_${SUB_STAGE_BUILD}" "python=$CONDA_BUILD_PY" pytest pytest-mpl
+SALEM_VERSION="$(sed -En 's/.*version: .*"(.*)".*/\1/p' "build/salem/meta.yaml")"
+SALEM_BUILD="$(sed -En 's/.*number: [^0-9]*([0-9]+)[^0-9]*/\1/p' "build/salem/meta.yaml")"
+
+conda create -n oggm_env --strict-channel-priority -c oggm -c conda-forge -c defaults "python=$CONDA_BUILD_PY" "${SUB_STAGE}=${SUB_STAGE_VERSION}=py_${SUB_STAGE_BUILD}" "salem=${SALEM_VERSION}=py_${SALEM_BUILD}" pytest pytest-mpl
+source activate oggm_env
 
 if [[ "$SUB_STAGE" == "oggm" ]]; then
 	pytest --mpl-oggm --mpl-upload -k "not test_googlemap" --pyargs oggm
