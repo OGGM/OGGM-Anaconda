@@ -9,7 +9,7 @@ source:
 
 build:
   noarch: python
-  number: 4
+  number: 5
   script: python setup.py install --single-version-externally-managed --record record.txt
 
 requirements:
@@ -23,14 +23,14 @@ requirements:
     - matplotlib >=3.1.2
     - numpy >=1.16
     - scipy
-    - pyproj >=2.4
+    - pyproj >=2.5
     - pandas
     - joblib
     - dask
     - distributed
     - geopandas
     - motionless
-    - salem
+    - salem >=0.2.4.202005032013
     - netcdf4
     - gdal
     - configobj

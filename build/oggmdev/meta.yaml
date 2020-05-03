@@ -1,6 +1,6 @@
 package:
   name: oggmdev
-  version: "1.2.0.202005032013"
+  version: "1.2.0.202005032036"
 
 source:
   git_url: https://github.com/OGGM/oggm.git
@@ -30,7 +30,7 @@ requirements:
     - distributed
     - geopandas
     - motionless
-    - salem
+    - salem >=0.2.4.202005032013
     - netcdf4
     - gdal
     - configobj

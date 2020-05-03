@@ -4,7 +4,7 @@ package:
 
 build:
   noarch: python
-  number: 19
+  number: 20
 
 requirements:
   run:
@@ -19,7 +19,7 @@ requirements:
     - distributed
     - geopandas
     - motionless
-    - salem
+    - salem >=0.2.4.202005032013
     - netcdf4
     - gdal
     - configobj
