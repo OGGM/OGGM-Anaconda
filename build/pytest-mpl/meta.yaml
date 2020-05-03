@@ -1,10 +1,10 @@
 package:
   name: pytest-mpl
-  version: "0.111.0.201811121226"
+  version: "0.121.0.202005032009"
 
 source:
-  url: https://github.com/OGGM/pytest-mpl/tarball/ffe265810e16aaca7c03dda7e783b60ac90e7743
-  fn: pytest-mpl-ffe265810e16aaca7c03dda7e783b60ac90e7743.tar.gz
+  url: https://github.com/OGGM/pytest-mpl/tarball/4d472ea23693f25d1a3d7ec3b34a3ac40278b393
+  fn: pytest-mpl-4d472ea23693f25d1a3d7ec3b34a3ac40278b393.tar.gz
 
 build:
   noarch: python
@@ -20,8 +20,7 @@ requirements:
     - python
     - setuptools
     - pytest >=3.7.2
-    - matplotlib
-    - nose
+    - matplotlib >=2.1.0
 
 test:
   commands:
