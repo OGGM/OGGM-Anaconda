@@ -18,12 +18,12 @@ function echo_stage() {
 	echo "      env: SUB_STAGE=$stage" >> .travis.yml
 	echo "      os: $os" >> .travis.yml
 	if [[ "$os" == "osx" ]]; then
-		echo "      osx_image: xcode11" >> .travis.yml
+		echo "      osx_image: xcode11.5" >> .travis.yml
 	fi
 }
 
 STAGES="motionless salem pytest-mpl oggm-deps oggm oggmdev"
-CONDA_BUILD_PYS="3.6 3.7"
+CONDA_BUILD_PYS="3.6 3.7 3.8"
 
 for stage in $STAGES; do
 	for os in linux; do
@@ -44,7 +44,7 @@ for stage in oggm oggmdev; do
 			echo "      env: CONDA_BUILD_PY=$CONDA_BUILD_PY SUB_STAGE=$stage" >> .travis.yml
 			echo "      os: $os" >> .travis.yml
 			if [[ "$os" == "osx" ]]; then
-				echo "      osx_image: xcode11" >> .travis.yml
+				echo "      osx_image: xcode11.5" >> .travis.yml
 			fi
 		done
 	done
