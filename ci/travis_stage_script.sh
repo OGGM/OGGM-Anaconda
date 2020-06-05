@@ -30,7 +30,9 @@ conda update -q --all
 conda info -a
 conda install -q conda-build conda-verify anaconda-client
 
-conda build --no-anaconda-upload --no-test --python "${CONDA_BUILD_PY}" --channel oggm --channel conda-forge --channel defaults --override-channels ./build/"$1" &
+[[ -n "${CONDA_BUILD_PY}" ]] && CONDA_BUILD_PY="--python ${CONDA_BUILD_PY}"
+
+conda build --no-anaconda-upload --no-test ${CONDA_BUILD_PY} --channel oggm --channel conda-forge --channel defaults --override-channels ./build/"$1" &
 CONDA_PID=$!
 
 set +x

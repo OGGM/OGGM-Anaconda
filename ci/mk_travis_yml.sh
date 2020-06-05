@@ -15,7 +15,7 @@ function echo_stage() {
 
 	echo "    - stage: ${stagename}" >> .travis.yml
 	echo "      script: ./ci/travis_stage_script.sh $stage" >> .travis.yml
-	echo "      env: CONDA_BUILD_PY=$CONDA_BUILD_PY SUB_STAGE=$stage" >> .travis.yml
+	echo "      env: SUB_STAGE=$stage" >> .travis.yml
 	echo "      os: $os" >> .travis.yml
 	if [[ "$os" == "osx" ]]; then
 		echo "      osx_image: xcode11" >> .travis.yml
@@ -27,9 +27,7 @@ CONDA_BUILD_PYS="3.6 3.7"
 
 for stage in $STAGES; do
 	for os in linux; do
-		for CONDA_BUILD_PY in $CONDA_BUILD_PYS; do
-			echo_stage $stage $os $CONDA_BUILD_PY
-		done
+		echo_stage $stage $os
 	done
 done
 
