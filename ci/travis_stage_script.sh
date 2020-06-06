@@ -26,9 +26,9 @@ fi
 
 conda update -q conda
 conda config --set channel_priority strict
-conda update -q --all
+conda update -c conda-forge -q --all
 conda info -a
-conda install -q conda-build conda-verify anaconda-client
+conda install -c conda-forge -q conda-build conda-verify anaconda-client
 
 [[ -n "${CONDA_BUILD_PY}" ]] && CONDA_BUILD_PY="--python ${CONDA_BUILD_PY}"
 

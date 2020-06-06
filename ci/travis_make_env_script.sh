@@ -10,7 +10,7 @@ source ./ci/install_miniconda.sh
 
 conda config --set always_yes yes --set changeps1 no 
 conda update -q conda
-conda update -q --all
+conda update -c conda-forge -q --all
 
 SUB_STAGE_VERSION="$(sed -En 's/.*version: .*"(.*)".*/\1/p' "build/${SUB_STAGE}/meta.yaml")"
 SUB_STAGE_BUILD="$(sed -En 's/.*number: [^0-9]*([0-9]+)[^0-9]*/\1/p' "build/${SUB_STAGE}/meta.yaml")"
