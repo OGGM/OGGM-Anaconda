@@ -40,10 +40,6 @@ jobs:
       env: SUB_STAGE=oggmdev
       os: linux
     - stage: make_env
-      script: ./ci/appveyor_trigger_from_travis.sh
-      env: CONDA_BUILD_PY=Trigger_Appveyor
-      os: linux
-    - stage: make_env
       script: ./ci/travis_make_env_script.sh
       env: CONDA_BUILD_PY=3.6 SUB_STAGE=oggm
       os: linux
