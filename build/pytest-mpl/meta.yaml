@@ -1,6 +1,6 @@
 package:
   name: pytest-mpl
-  version: "0.122.0.202005101308"
+  version: "0.122.0.202006062112"
 
 source:
   url: https://github.com/OGGM/pytest-mpl/tarball/f90e9771d743fdf23d7b386fa12d8e13cb7cd9a0
@@ -9,16 +9,14 @@ source:
 build:
   noarch: python
   number: 0
-  script: python setup.py install --single-version-externally-managed --record record.txt
+  script: python -m pip install --no-deps --ignore-installed -vv .
 
 requirements:
-  build:
+  host:
     - python
-    - setuptools
-
+    - pip
   run:
     - python
-    - setuptools
     - pytest >=3.7.2
     - matplotlib >=2.1.0
 

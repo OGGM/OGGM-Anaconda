@@ -9,15 +9,14 @@ source:
 
 build:
   noarch: python
-  number: 4
-  script: python setup.py install --single-version-externally-managed --record record.txt
+  number: 5
+  script: python -m pip install --no-deps --ignore-installed -vv .
 
 requirements:
-  build:
+  host:
     - python
-    - setuptools
+    - pip
     - six
-
   run:
     - python
     - matplotlib >=2.0.0

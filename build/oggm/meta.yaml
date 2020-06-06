@@ -9,12 +9,13 @@ source:
 
 build:
   noarch: python
-  number: 5
-  script: python setup.py install --single-version-externally-managed --record record.txt
+  number: 6
+  script: python -m pip install --no-deps --ignore-installed -vv .
 
 requirements:
   host:
     - python
+    - pip
     - setuptools
     - setuptools_scm
     - setuptools_scm_git_archive

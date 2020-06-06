@@ -1,6 +1,6 @@
 package:
   name: salem
-  version: "0.2.4.202006051418"
+  version: "0.2.4.202006062112"
 
 source:
   url: https://github.com/fmaussion/salem/tarball/bdf3c4de449c61f310c5a124a8546eea69de2043
@@ -9,13 +9,12 @@ source:
 build:
   noarch: python
   number: 0
-  script: python setup.py install --single-version-externally-managed --record record.txt
+  script: python -m pip install --no-deps --ignore-installed -vv .
 
 requirements:
-  build:
+  host:
     - python
-    - setuptools
-
+    - pip
   run:
     - python
     - matplotlib >=3.1.2
