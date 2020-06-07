@@ -1,0 +1,40 @@
+name: Build Packages
+on: push
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  packages:
+    name: Build packages
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Setup Conda
+        run: ./ci/setup-conda.sh
+      - name: Build Motionless
+        env:
+          ANACONDA_AUTH_TOKEN: ${{ secrets.ANACONDA_AUTH_TOKEN }}
+        run: ./ci/build-package.sh motionless
+      - name: Build Salem
+        run: ./ci/build-package.sh salem
+        env:
+          ANACONDA_AUTH_TOKEN: ${{ secrets.ANACONDA_AUTH_TOKEN }}
+      - name: Build Pytest-Mpl
+        run: ./ci/build-package.sh pytest-mpl
+        env:
+          ANACONDA_AUTH_TOKEN: ${{ secrets.ANACONDA_AUTH_TOKEN }}
+      - name: Build oggm-deps
+        run: ./ci/build-package.sh oggm-deps
+        env:
+          ANACONDA_AUTH_TOKEN: ${{ secrets.ANACONDA_AUTH_TOKEN }}
+      - name: Build oggm
+        run: ./ci/build-package.sh oggm
+        env:
+          ANACONDA_AUTH_TOKEN: ${{ secrets.ANACONDA_AUTH_TOKEN }}
+      - name: Build oggmdev
+        run: ./ci/build-package.sh oggmdev
+        env:
+          ANACONDA_AUTH_TOKEN: ${{ secrets.ANACONDA_AUTH_TOKEN }}
