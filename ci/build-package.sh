@@ -31,7 +31,13 @@ rm -rf "$CONDA_BLD_PATH"
 
 RQ conda build --no-anaconda-upload --no-test --channel oggm --channel conda-forge --channel defaults --override-channels "./build/$PKG"
 
+echo
+echo "Done building"
+echo
+
 for i in "$CONDA_BLD_PATH"/*/*.tar.bz2; do
+    echo
 	echo "Uploading $(basename $i)"
-	anaconda -t "$ANACONDA_AUTH_TOKEN" upload -u oggm $i || true
+    echo
+	anaconda -t "$ANACONDA_AUTH_TOKEN" upload -u oggm $i || echo "Upload failed"
 done
