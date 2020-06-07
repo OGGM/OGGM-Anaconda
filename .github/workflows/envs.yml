@@ -1,0 +1,29 @@
+name: Build Packages
+on:
+  repository_dispatch:
+    types: [build-envs]
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  packages:
+    name: Build packages
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+        python: [3.6, 3.7, 3.8]
+        stage: [oggm, oggmdev]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Setup Conda
+        run: ./ci/setup-conda.sh
+      - name: Make Env
+        run: ./ci/make-env.sh
+        env:
+          GH_USER: ${{ secrets.DispatchUser }}
+          GH_AUTH: ${{ secrets.DispatchSecret }}
+          STAGE: ${{ matrix.stage }}

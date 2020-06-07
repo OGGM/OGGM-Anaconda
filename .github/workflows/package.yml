@@ -38,3 +38,10 @@ jobs:
         run: ./ci/build-package.sh oggmdev
         env:
           ANACONDA_AUTH_TOKEN: ${{ secrets.ANACONDA_AUTH_TOKEN }}
+      - name: Trigger Env-Rebuild
+        uses: OGGM/repo-dispatch-action@v1
+        with:
+          repo: OGGM/OGGM-Anaconda
+          auth_user: ${{ secrets.DispatchUser }}
+          auth_secret: ${{ secrets.DispatchSecret }}
+          action: build-envs
