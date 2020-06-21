@@ -9,7 +9,7 @@ source:
 
 build:
   noarch: python
-  number: 6
+  number: 7
   script: python -m pip install --no-deps --ignore-installed -vv .
 
 requirements:
@@ -25,6 +25,7 @@ requirements:
     - numpy >=1.16
     - scipy
     - pyproj >=2.5
+    - pytables
     - pandas
     - joblib
     - dask
