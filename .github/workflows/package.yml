@@ -1,4 +1,4 @@
-name: Build Packages
+name: Conda
 on: push
 
 defaults:
@@ -7,7 +7,7 @@ defaults:
 
 jobs:
   packages:
-    name: Build packages
+    name: Build Packages
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -38,10 +38,25 @@ jobs:
         run: ./ci/build-package.sh oggmdev
         env:
           ANACONDA_AUTH_TOKEN: ${{ secrets.ANACONDA_AUTH_TOKEN }}
-      - name: Trigger Env-Rebuild
-        uses: OGGM/repo-dispatch-action@v1
-        with:
-          repo: OGGM/OGGM-Anaconda
-          auth_user: ${{ secrets.DispatchUser }}
-          auth_secret: ${{ secrets.DispatchSecret }}
-          action: build-envs
+  envs:
+    name: Build Envs
+    needs: packages
+    strategy:
+      fail-fast: false
+      matrix:
+        pkg: [oggm, oggmdev]
+        python: [3.6, 3.7, 3.8]
+        os: [ubuntu-latest, macos-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Setup Conda
+        run: ./ci/setup-conda.sh
+      - name: Make Env
+        run: ./ci/make-env.sh
+        env:
+          GH_USER: ${{ secrets.DispatchUser }}
+          GH_AUTH: ${{ secrets.DispatchSecret }}
+          PKG: ${{ matrix.pkg }}
+          PYVER: ${{ matrix.python }}
