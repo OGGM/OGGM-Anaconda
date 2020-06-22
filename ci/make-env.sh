@@ -27,7 +27,7 @@ echo ">>> conda activate oggm_env"
 conda activate oggm_env
 
 if [[ "$PKG" == "oggm" ]]; then
-	RQ pytest --pyargs oggm
+	RQ pytest -k "not test_env_var and not test_corrupted_file and not test_dl_verify" --pyargs oggm
 else
 	RQ pytest --mpl-oggm --mpl-upload --pyargs oggm
 fi
