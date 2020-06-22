@@ -27,7 +27,7 @@ echo ">>> conda activate oggm_env"
 conda activate oggm_env
 
 if [[ "$PKG" == "oggm" ]]; then
-	RQ pytest --mpl-oggm --mpl-upload -k "not test_googlemap" --pyargs oggm
+	RQ pytest --pyargs oggm
 else
 	RQ pytest --mpl-oggm --mpl-upload --pyargs oggm
 fi
