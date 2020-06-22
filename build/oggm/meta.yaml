@@ -9,7 +9,7 @@ source:
 
 build:
   noarch: python
-  number: 7
+  number: 8
   script: python -m pip install --no-deps --ignore-installed -vv .
 
 requirements:
@@ -30,9 +30,9 @@ requirements:
     - joblib
     - dask
     - distributed
-    - geopandas
+    - geopandas <0.7.0
     - motionless
-    - salem >=0.2.4.202005032013
+    - salem <0.2.4.202002210000
     - netcdf4
     - gdal
     - configobj
