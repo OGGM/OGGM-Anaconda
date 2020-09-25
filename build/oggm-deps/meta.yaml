@@ -4,15 +4,22 @@ package:
 
 build:
   noarch: python
-  number: 20
+  number: 21
 
 requirements:
   run:
     - python >=3.6
+    - pip
+    - setuptools
+    - setuptools_scm
+    - setuptools_scm_git_archive
+    - pytest
+    - pytest-mpl >=0.120.0
     - matplotlib >=3.1.2
     - numpy >=1.16
     - scipy
     - pyproj >=2.5
+    - pytables
     - pandas
     - joblib
     - dask
