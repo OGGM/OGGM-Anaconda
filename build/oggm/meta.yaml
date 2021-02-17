@@ -1,15 +1,15 @@
 package:
   name: oggm
-  version: "1.3.1"
+  version: "1.4.0"
 
 source:
-  url: https://pypi.io/packages/source/o/oggm/oggm-1.3.1.tar.gz
-  fn: oggm-1.3.1.tar.gz
-  sha256: d82b9c1366a0e135af8b56183e78aec7b78b828fc3bd07ed4f42f5f709819161
+  url: https://pypi.io/packages/source/o/oggm/oggm-1.4.0.tar.gz
+  fn: oggm-1.4.0.tar.gz
+  sha256: 818175ec5f6189b515853765a3a246f5cf917a7fbf8a50c1219df21f94e8e9f4
 
 build:
   noarch: python
-  number: 9
+  number: 0
   script: python -m pip install --no-deps --ignore-installed -vv .
 
 requirements:
@@ -21,7 +21,7 @@ requirements:
     - setuptools_scm_git_archive
   run:
     - python
-    - matplotlib >=3.1.2,<3.3.0
+    - matplotlib >=3.1.2
     - numpy >=1.16
     - scipy
     - pyproj >=2.5
@@ -30,15 +30,15 @@ requirements:
     - joblib
     - dask
     - distributed
-    - geopandas <0.7.0
+    - geopandas
     - motionless
-    - salem <0.2.4.202002210000
+    - salem >=0.3.3
     - netcdf4
     - gdal
     - configobj
     - krb5
     - xarray >=0.14.1
-    - cftime <1.1
+    - cftime
     - rasterio >=1.0
     - scikit-image
     - pillow
