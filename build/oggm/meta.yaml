@@ -1,11 +1,11 @@
 package:
   name: oggm
-  version: "1.4.0"
+  version: "1.5.0"
 
 source:
-  url: https://pypi.io/packages/source/o/oggm/oggm-1.4.0.tar.gz
-  fn: oggm-1.4.0.tar.gz
-  sha256: 818175ec5f6189b515853765a3a246f5cf917a7fbf8a50c1219df21f94e8e9f4
+  url: https://pypi.io/packages/source/o/oggm/oggm-1.5.0.tar.gz
+  fn: oggm-1.5.0.tar.gz
+  sha256: 17cdb86590b0462cc85eb7a31d3dfc07b7f492a6660bf0bf584fe93a1b61f2e0
 
 build:
   noarch: python
