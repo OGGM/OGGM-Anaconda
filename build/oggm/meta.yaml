@@ -5,7 +5,7 @@ package:
 source:
   url: https://pypi.io/packages/source/o/oggm/oggm-1.5.0.tar.gz
   fn: oggm-1.5.0.tar.gz
-  sha256: 17cdb86590b0462cc85eb7a31d3dfc07b7f492a6660bf0bf584fe93a1b61f2e0
+  sha256: 297ae15f32af93713f72ec0b5bd88b516440726c416e9a478a1a71722f65e7b1
 
 build:
   noarch: python
