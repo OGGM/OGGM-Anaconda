@@ -17,10 +17,6 @@ jobs:
         uses: actions/checkout@v2
       - name: Setup Conda
         run: ./ci/setup-conda.sh
-      - name: Build Motionless
-        env:
-          ANACONDA_AUTH_TOKEN: ${{ secrets.ANACONDA_AUTH_TOKEN }}
-        run: ./ci/build-package.sh motionless
       - name: Build Salem
         run: ./ci/build-package.sh salem
         env:
