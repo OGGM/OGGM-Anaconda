@@ -40,7 +40,11 @@ RQ conda env export -f "$ENV_FILE_NAME"
 RQ git config --global user.email "actions@github.com"
 RQ git config --global user.name "Github Actions"
 
-git clone -q "https://${GH_USER}:${GH_AUTH}@github.com/OGGM/OGGM-dependency-list" "/tmp/deplist_repo"
+export SSH_AUTH_SOCK="/tmp/ssh_agent.sock"
+ssh-agent -a $SSH_AUTH_SOCK >/dev/null
+ssh-add - <<< "$DEPLOY_KEY"
+
+git clone -q "git@github.com:OGGM/OGGM-dependency-list.git" "/tmp/deplist_repo"
 
 DDIR="/tmp/deplist_repo/${RUNNER_OS}-64"
 mkdir -p "$DDIR"

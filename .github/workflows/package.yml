@@ -56,7 +56,6 @@ jobs:
       - name: Make Env
         run: ./ci/make-env.sh
         env:
-          GH_USER: ${{ secrets.DispatchUser }}
-          GH_AUTH: ${{ secrets.DispatchSecret }}
+          DEPLOY_KEY: ${{ secrets.DEP_LIST_DEPLOY_KEY }}
           PKG: ${{ matrix.pkg }}
           PYVER: ${{ matrix.python }}
