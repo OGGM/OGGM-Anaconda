@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Setup Conda
         run: ./ci/setup-conda.sh
       - name: Build Salem
@@ -50,7 +50,7 @@ jobs:
     continue-on-error: ${{ contains(matrix.os, 'windows') }}
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Setup Conda
         run: ./ci/setup-conda.sh
       - name: Make Env
