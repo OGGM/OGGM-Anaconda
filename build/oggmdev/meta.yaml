@@ -1,10 +1,10 @@
 package:
   name: oggmdev
-  version: "1.5.2.202203011211"
+  version: "1.5.3.202205172217"
 
 source:
   git_url: https://github.com/OGGM/oggm.git
-  git_rev: 8e9c106cd584fb9ea3b32c5f0c477be8572d97ce
+  git_rev: 835dd407f0a8dd64dc83e9d7fe1335e99524700c
 
 build:
   noarch: python
@@ -39,6 +39,7 @@ requirements:
     - xarray >=0.14.1
     - cftime
     - rasterio >=1.0
+    - rioxarray
     - scikit-image
     - pillow
     - gdal

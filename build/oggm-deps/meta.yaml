@@ -4,7 +4,7 @@ package:
 
 build:
   noarch: python
-  number: 21
+  number: 22
 
 requirements:
   run:
@@ -34,6 +34,7 @@ requirements:
     - xarray >=0.14.1
     - cftime
     - rasterio >=1.0
+    - rioxarray
     - scikit-image
     - pillow
     - gdal
