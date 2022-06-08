@@ -1,6 +1,6 @@
 package:
   name: pytest-mpl
-  version: "0.130.0.202205172217"
+  version: "0.130.0.202206081521"
 
 source:
   url: https://github.com/OGGM/pytest-mpl/tarball/147ca9a1fad5767d51ee5c9db8675ebaf34db9da
