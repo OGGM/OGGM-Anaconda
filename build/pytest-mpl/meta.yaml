@@ -1,10 +1,10 @@
 package:
   name: pytest-mpl
-  version: "0.130.0.202206081521"
+  version: "0.130.0.202209051724"
 
 source:
-  url: https://github.com/OGGM/pytest-mpl/tarball/147ca9a1fad5767d51ee5c9db8675ebaf34db9da
-  fn: pytest-mpl-147ca9a1fad5767d51ee5c9db8675ebaf34db9da.tar.gz
+  url: https://github.com/OGGM/pytest-mpl/tarball/20b9b067d8643a6fe933c44d3f2f199e69571455
+  fn: pytest-mpl-20b9b067d8643a6fe933c44d3f2f199e69571455.tar.gz
 
 build:
   noarch: python
