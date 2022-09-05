@@ -56,7 +56,7 @@ test:
     - pytest
     - pytest-mpl
   commands:
-    - pytest --mpl-oggm --mpl-upload --pyargs oggm
+    - pytest.oggm --mpl-oggm --mpl-upload
 ### TEST END ###
 
 about:
