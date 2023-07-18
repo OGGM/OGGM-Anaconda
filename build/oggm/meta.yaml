@@ -1,11 +1,11 @@
 package:
   name: oggm
-  version: "1.5.3"
+  version: "1.6.0"
 
 source:
-  url: https://pypi.io/packages/source/o/oggm/oggm-1.5.3.tar.gz
-  fn: oggm-1.5.3.tar.gz
-  sha256: b5762421803734c3cb5f516105093ce3a44bb5e100a5b66635fe162e0987fe36
+  url: https://pypi.io/packages/source/o/oggm/oggm-1.6.0.tar.gz
+  fn: oggm-1.6.0.tar.gz
+  sha256: d49151f27387ebdeb7f899bfef6ff8b9512ea546d84663d1c446c01429886548
 
 build:
   noarch: python
@@ -32,7 +32,7 @@ requirements:
     - distributed
     - geopandas
     - motionless
-    - salem >=0.3.3
+    - salem >=0.3.9
     - netcdf4
     - gdal
     - configobj
