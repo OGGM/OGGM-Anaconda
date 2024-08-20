@@ -1,29 +1,28 @@
 package:
   name: oggmdev
-  version: "1.5.3.202307181848"
+  version: "1.6.1.202408202037"
 
 source:
   git_url: https://github.com/OGGM/oggm.git
-  git_rev: f305390e09a55c1fa204f4d7834c0e377f1c812f
+  git_rev: c883e58751ee7ee74dcc0a3eaf29c7ca5950c5b2
 
 build:
-  noarch: python
   number: 0
-  script: python -m pip install --no-deps --ignore-installed -vv .
+  noarch: python
+  script: {{ PYTHON }} -m pip install --no-deps --ignore-installed -vv .
 
 requirements:
   host:
-    - python
+    - python >=3.9
     - pip
     - setuptools
-    - setuptools_scm
-    - setuptools_scm_git_archive
+    - setuptools_scm >=8
   run:
-    - python
+    - python >=3.9
     - matplotlib >=3.1.2
-    - numpy >=1.16
+    - numpy >=1.26
     - scipy
-    - pyproj >=2.5
+    - pyproj >=3.6
     - pytables
     - pandas
     - joblib
@@ -31,12 +30,11 @@ requirements:
     - distributed
     - geopandas
     - motionless
-    - salem >=0.3.3
+    - salem >=0.3.11
     - netcdf4
     - gdal
     - configobj
-    - krb5
-    - xarray >=0.14.1
+    - xarray >=2024
     - cftime
     - rasterio >=1.0
     - rioxarray
@@ -46,7 +44,6 @@ requirements:
     - progressbar2
     - filelock
     - py
-    - cython
     - requests
 
 ### TEST START ###
@@ -56,7 +53,7 @@ test:
     - pytest
     - pytest-mpl
   commands:
-    - pytest.oggm --mpl-oggm --mpl-upload
+    - pytest.oggm --mpl-oggm
 ### TEST END ###
 
 about:

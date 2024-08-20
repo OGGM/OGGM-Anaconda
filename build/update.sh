@@ -8,7 +8,6 @@ cd "$(dirname "$0")"
 
 SHA_OGGM="$(getSha OGGM/oggm)"
 
-sed -i -r "s|(fn: .*-).*(\.tar\.gz)|\1${SHA_MPL}\2|" pytest-mpl/meta.yaml || exit -2
 sed -i -r "s|( git_rev: ).*|\1${SHA_OGGM}|" oggmdev/meta.yaml || exit -2
 
 DATE_STR="$(date +%Y%m%d%H%M)"
