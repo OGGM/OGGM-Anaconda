@@ -1,24 +1,23 @@
 package:
   name: oggm-deps
-  version: "100"
+  version: "161"
 
 build:
   noarch: python
-  number: 22
+  number: 0
 
 requirements:
   run:
-    - python >=3.6
+    - python >=3.9
     - pip
     - setuptools
     - setuptools_scm
-    - setuptools_scm_git_archive
     - pytest
-    - pytest-mpl >=0.120.0
+    - pytest-mpl >=0.170.0
     - matplotlib >=3.1.2
-    - numpy >=1.16
+    - numpy >=1.26
     - scipy
-    - pyproj >=2.5
+    - pyproj >=3.6
     - pytables
     - pandas
     - joblib
@@ -26,12 +25,11 @@ requirements:
     - distributed
     - geopandas
     - motionless
-    - salem >=0.2.4.202005032013
+    - salem >=0.3.11
     - netcdf4
     - gdal
     - configobj
-    - krb5
-    - xarray >=0.14.1
+    - xarray >=2024
     - cftime
     - rasterio >=1.0
     - rioxarray
