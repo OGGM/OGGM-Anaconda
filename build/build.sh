@@ -9,7 +9,6 @@ function cb() {
 
 unset TRAVIS
 
-cb ./salem
 cb ./pytest-mpl
 cb ./oggm-deps
 cb ./oggmdev

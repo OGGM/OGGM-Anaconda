@@ -12,16 +12,7 @@ export OGGM_USE_MP_SPAWN=1
 PKG_VERSION="$(sed -En 's/.*version: .*"(.*)".*/\1/p' "build/${PKG}/meta.yaml")"
 PKG_BUILD="$(sed -En 's/.*number: [^0-9]*([0-9]+)[^0-9]*/\1/p' "build/${PKG}/meta.yaml")"
 
-SALEM_VERSION="$(sed -En 's/.*version: .*"(.*)".*/\1/p' "build/salem/meta.yaml")"
-SALEM_BUILD="$(sed -En 's/.*number: [^0-9]*([0-9]+)[^0-9]*/\1/p' "build/salem/meta.yaml")"
-
-SALEM_PKG="salem=${SALEM_VERSION}=py_${SALEM_BUILD}"
-
-if [[ "$PKG" == "oggm" ]]; then
-	SALEM_PKG="salem"
-fi
-
-RQ conda create -n oggm_env --strict-channel-priority -c oggm -c conda-forge -c defaults "python=$PYVER" "${PKG}=${PKG_VERSION}=py_${PKG_BUILD}" "${SALEM_PKG}" pytest pytest-mpl
+RQ conda create -n oggm_env --strict-channel-priority -c oggm -c conda-forge -c defaults "python=$PYVER" "${PKG}=${PKG_VERSION}=py_${PKG_BUILD}" pytest pytest-mpl
 
 echo ">>> conda activate oggm_env"
 conda activate oggm_env
