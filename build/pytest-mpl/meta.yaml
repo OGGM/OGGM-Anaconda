@@ -1,22 +1,25 @@
+{% set name = "pytest-mpl" %}
+{% set version = "0.170.0" %}
+
 package:
-  name: pytest-mpl
-  version: "0.130.0.202307181848"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
-  url: https://github.com/OGGM/pytest-mpl/tarball/cc2da18b5b5ae69c1dc847d256dfcbe8acc4a054
-  fn: pytest-mpl-cc2da18b5b5ae69c1dc847d256dfcbe8acc4a054.tar.gz
+  url: https://github.com/OGGM/pytest-mpl/archive/refs/tags/v{{ version }}.tar.gz
+  fn: {{ name }}-{{ version }}.tar.gz
 
 build:
-  noarch: python
   number: 0
+  noarch: python
   script: python -m pip install --no-deps --ignore-installed -vv .
 
 requirements:
   host:
-    - python
+    - python >=3.9
     - pip
   run:
-    - python
+    - python >=3.9
     - pytest >=3.7.2
     - matplotlib >=2.1.0
 
