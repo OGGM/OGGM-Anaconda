@@ -3,7 +3,7 @@
 
 package:
   name: {{ name|lower }}
-  version: 1.6.1
+  version: {{ version }}
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
