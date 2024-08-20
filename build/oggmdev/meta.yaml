@@ -10,7 +10,7 @@ source:
   git_rev: c883e58751ee7ee74dcc0a3eaf29c7ca5950c5b2
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install --no-deps --ignore-installed -vv .
 
@@ -23,7 +23,7 @@ requirements:
   run:
     - python >=3.9
     - matplotlib >=3.1.2
-    - numpy >=1.26
+    - numpy <2
     - scipy
     - pyproj >=3.6
     - pytables
