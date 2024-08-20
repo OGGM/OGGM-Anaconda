@@ -16,8 +16,8 @@ PKG_BUILD="$(sed -En 's/.*number: [^0-9]*([0-9]+)[^0-9]*/\1/p' "build/${PKG}/met
 
 RQ conda create -n oggm_env --strict-channel-priority -c oggm -c conda-forge -c defaults "python=$PYVER" "${PKG}=${PKG_VERSION}=py_${PKG_BUILD}" pytest pytest-mpl
 
-echo ">>> conda activate oggm_env"
-conda activate oggm_env
+echo ">>> activate oggm_env"
+source activate oggm_env
 
 if [[ "$PKG" == "oggm" ]]; then
 	RQ pytest -k "not test_env_var and not test_corrupted_file and not test_dl_verify" --pyargs oggm
