@@ -22,7 +22,7 @@ conda activate oggm_env
 if [[ "$PKG" == "oggm" ]]; then
 	RQ pytest -k "not test_env_var and not test_corrupted_file and not test_dl_verify" --pyargs oggm
 else
-	RQ pytest.oggm --mpl-oggm --mpl-upload
+	RQ pytest.oggm --mpl-oggm
 fi
 
 ENV_FILE_NAME="${PKG}-$(conda list -f -e "$PKG" | tail -n1 | cut -d= -f2)_$(date +%Y%m%d)_py${PYVER/./}.yml"
