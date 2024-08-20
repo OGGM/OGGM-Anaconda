@@ -1,10 +1,12 @@
 #!/bin/bash
 set -e
 
-cd "$(dirname "$0")"
-source ./activate-conda.sh
+function RQ() {
+    echo ">>>" "$@"
+    "$@"
+}
 
-cd ..
+cd "$(dirname "$0")"/..
 
 export MPLBACKEND=agg
 export OGGM_USE_MP_SPAWN=1

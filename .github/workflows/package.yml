@@ -12,11 +12,24 @@ jobs:
   packages:
     name: Build Packages
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash -el {0}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Setup Conda
-        run: ./ci/setup-conda.sh
+        uses: conda-incubator/setup-miniconda@v3
+        with:
+          auto-update-conda: true
+          auto-activate-base: true
+          activate-environment: oggmbuild
+          channel-priority: strict
+          channels: conda-forge
+      - name: Install global deps
+        run: |
+          conda install conda-build anaconda-client
+          conda info -a
       - name: Build Pytest-Mpl
         run: ./ci/build-package.sh pytest-mpl
         env:
@@ -44,11 +57,23 @@ jobs:
         os: [ubuntu-latest, macos-latest]
     runs-on: ${{ matrix.os }}
     continue-on-error: ${{ contains(matrix.os, 'windows') }}
+    defaults:
+      run:
+        shell: bash -el {0}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Setup Conda
-        run: ./ci/setup-conda.sh
+        uses: conda-incubator/setup-miniconda@v3
+        with:
+          auto-update-conda: true
+          activate-environment: oggmbuild
+          channel-priority: strict
+          channels: conda-forge
+      - name: Install global deps
+        run: |
+          conda install conda-build anaconda-client
+          conda info -a
       - name: Make Env
         run: ./ci/make-env.sh
         env:
