@@ -14,7 +14,7 @@ DATE_STR="$(date +%Y%m%d%H%M)"
 
 for i in oggmdev; do
 	if ! git diff --quiet --exit-code "${i}"/meta.yaml; then
-		sed -i -r "s|(version: .*\.).*|\1${DATE_STR}\"|" "${i}"/meta.yaml || exit -2
+		sed -i -r "s|(.* set version = \".*\.).*(\".*)|\1${DATE_STR}\2|" "${i}"/meta.yaml || exit -2
 	fi
 done
 
