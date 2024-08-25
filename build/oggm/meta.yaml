@@ -1,5 +1,5 @@
 {% set name = "oggm" %}
-{% set version = "1.6.1" %}
+{% set version = "1.6.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 3051a4cd6a375a6cffd114530373b9d7108a2189fb85d858c2318ec12011e544
+  sha256: 35eb945b78391b3b4cec23e93666982d466b04f26e994c6a03821e425d0e987b
 
 build:
   number: 0
