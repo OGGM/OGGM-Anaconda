@@ -1,5 +1,5 @@
 {% set name = "pytest-mpl" %}
-{% set version = "0.170.0" %}
+{% set version = "0.170.1" %}
 
 package:
   name: {{ name|lower }}
@@ -10,7 +10,7 @@ source:
   fn: {{ name }}-{{ version }}.tar.gz
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install --no-deps -vv .
 
