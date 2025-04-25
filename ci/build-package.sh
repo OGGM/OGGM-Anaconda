@@ -21,7 +21,7 @@ echo
 
 anaconda --version
 
-for i in "$CONDA_BLD_PATH"/*/*.tar.bz2; do
+for i in "$CONDA_BLD_PATH"/*/*.conda; do
     echo
 	echo "Uploading $(basename $i)"
     echo
