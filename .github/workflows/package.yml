@@ -26,7 +26,7 @@ jobs:
           auto-activate-base: true
           activate-environment: oggmbuild
           channel-priority: strict
-          channels: conda-forge
+          channels: conda-forge,defaults
       - name: Install global deps
         run: |
           conda install conda-build anaconda-client
@@ -70,7 +70,7 @@ jobs:
           auto-update-conda: true
           activate-environment: oggmbuild
           channel-priority: strict
-          channels: conda-forge
+          channels: conda-forge,defaults
       - name: Install global deps
         run: |
           conda install conda-build anaconda-client
