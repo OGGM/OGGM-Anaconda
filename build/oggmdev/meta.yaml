@@ -1,5 +1,5 @@
 {% set name = "oggmdev" %}
-{% set version = "1.6.1.202408212309" %}
+{% set version = "1.6.2.202504251350" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   git_url: https://github.com/OGGM/oggm.git
-  git_rev: 25916346ba66ab17c4d208a34f374ee348297027
+  git_rev: 24a25ac25e0adc807e19990daf261aed38fa8142
 
 build:
   number: 1
