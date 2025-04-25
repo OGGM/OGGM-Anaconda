@@ -1,6 +1,6 @@
 package:
   name: oggm-deps
-  version: "161"
+  version: "162"
 
 build:
   noarch: python
@@ -15,7 +15,7 @@ requirements:
     - pytest
     - pytest-mpl >=0.170.0
     - matplotlib >=3.1.2
-    - numpy <2
+    - numpy
     - scipy
     - pyproj >=3.6
     - pytables
