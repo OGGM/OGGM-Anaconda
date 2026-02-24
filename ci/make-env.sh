@@ -28,7 +28,7 @@ fi
 ENV_FILE_NAME="${PKG}-$(conda list -f -e "$PKG" | tail -n1 | cut -d= -f2)_$(date +%Y%m%d)_py${PYVER/./}.yml"
 
 [[ "$PKG" != "oggm" ]] && RQ conda remove --force "$PKG" || true
-RQ conda env export -f "$ENV_FILE_NAME"
+RQ conda export --format=environment-yaml --file="$ENV_FILE_NAME"
 
 RQ git config --global user.email "actions@github.com"
 RQ git config --global user.name "Github Actions"
