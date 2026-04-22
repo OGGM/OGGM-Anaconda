@@ -1,5 +1,5 @@
 {% set name = "oggm" %}
-{% set version = "1.6.2" %}
+{% set version = "1.6.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 35eb945b78391b3b4cec23e93666982d466b04f26e994c6a03821e425d0e987b
+  sha256: 332330ea5b3999fcf0820e6b1305472c405a12fa58a777cea1b0c49d16fbeef9
 
 build:
   number: 1
@@ -56,7 +56,7 @@ test:
     - pytest
     - pytest-mpl
   commands:
-    - pytest --mpl-oggm -k "not test_googlemap" --pyargs oggm
+    - pytest.oggm --mpl-oggm
 ### TEST END ###
 
 about:
