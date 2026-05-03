@@ -32,7 +32,7 @@ jobs:
           conda install conda-build anaconda-client
           conda info -a
       - name: Build Pytest-Mpl
-        run: ./ci/build-package.sh pytest-mpl
+        run: ./ci/build-package.sh pytest-mpl-oggm
         env:
           ANACONDA_AUTH_TOKEN: ${{ secrets.ANACONDA_AUTH_TOKEN }}
       - name: Build oggm-deps
