@@ -55,7 +55,7 @@ test:
   requires:
     - git
     - pytest
-    - pytest-mpl
+    - pytest-mpl-oggm
   commands:
     - pytest.oggm --mpl-oggm
 ### TEST END ###

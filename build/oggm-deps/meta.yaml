@@ -1,6 +1,6 @@
 package:
   name: oggm-deps
-  version: "162"
+  version: "163"
 
 build:
   noarch: python
@@ -8,12 +8,12 @@ build:
 
 requirements:
   run:
-    - python >=3.9
+    - python >=3.12
     - pip
     - setuptools
     - setuptools_scm
     - pytest
-    - pytest-mpl >=0.170.0
+    - pytest-mpl-oggm >=0.180.1
     - matplotlib >=3.1.2
     - numpy
     - scipy

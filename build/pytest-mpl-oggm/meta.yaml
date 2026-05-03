@@ -1,4 +1,4 @@
-{% set name = "pytest-mpl" %}
+{% set name = "pytest-mpl-oggm" %}
 {% set version = "0.180.1" %}
 
 package:
