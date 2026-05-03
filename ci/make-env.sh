@@ -20,7 +20,7 @@ echo ">>> activate oggm_env"
 source activate oggm_env
 
 if [[ "$PKG" == "oggm" ]]; then
-	RQ pytest --mpl-oggm -k "not test_googlemap" --pyargs oggm
+	RQ pytest.oggm --mpl-oggm
 else
 	RQ pytest.oggm --mpl-oggm
 fi
