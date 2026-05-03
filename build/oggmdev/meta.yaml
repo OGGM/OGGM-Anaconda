@@ -1,5 +1,5 @@
 {% set name = "oggmdev" %}
-{% set version = "1.6.3.202605040111" %}
+{% set version = "1.6.3.202605040112" %}
 
 package:
   name: {{ name|lower }}
@@ -10,7 +10,7 @@ source:
   git_rev: 76f44230b6ecd2bd3161d1e04ff426e5947a0dc5
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install --no-deps --ignore-installed -vv .
 
@@ -49,6 +49,7 @@ requirements:
     - filelock
     - py
     - requests
+    - zarr
 
 ### TEST START ###
 test:
