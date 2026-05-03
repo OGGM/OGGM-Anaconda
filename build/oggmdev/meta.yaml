@@ -1,5 +1,5 @@
 {% set name = "oggmdev" %}
-{% set version = "1.6.3.202604222352" %}
+{% set version = "1.6.3.202605040111" %}
 
 package:
   name: {{ name|lower }}
@@ -19,7 +19,8 @@ requirements:
     - python >=3.9
     - pip
     - setuptools
-    - setuptools_scm >=8
+    - hatchling >=1.26
+    - hatch-vcs
   run:
     - python >=3.9
     - matplotlib >=3.1.2
